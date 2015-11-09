@@ -1,0 +1,7 @@
+// You know what it says
+.circle-container {
+	border-radius: 50%;
+	text-align: center;
+	@include square($space*6);
+	overflow:hidden;
+}

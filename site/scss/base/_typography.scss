@@ -1,0 +1,144 @@
+  // -----------------------------
+ // 		Base Typography
+// ---------------------------------
+
+body {
+	font-family: $system-font-stack;
+	font-size: 100%;
+	color:#333;
+	line-height:1.5em;
+}
+
+
+// ------------------------
+// 		Headings
+//
+// Headings have no margins by default. 
+// Margins can be added via the provided quick-classes
+// example: `<h1 class="h1 mar-v">Heading</h1>`
+// Resources: http://typecast.com/blog/a-more-modern-scale-for-web-typography
+h1, h2, h3, h4, h5, h6 {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+h1 {font-size: 4em;line-height: 1.05em;font-weight:200;}
+h2 {font-size: 2.25em;line-height: 1.25em;}
+h3 {font-size: 1.75em;line-height: 1.25em;}
+h4 {font-size: 1.125em;line-height: 1.2em;}
+h5 {font-size: 1em;line-height: 1.12em;text-transform: uppercase;}
+
+.h1 {font-size: 4em;line-height: 1.05em;margin-top:0.67em;margin-bottom:0.67em;}
+.h2 {font-size: 2.25em;line-height: 1.25em;margin-top:0.83em;margin-bottom:0.83em;}
+.h3 {font-size: 1.75em;line-height: 1.25em;margin-top:1em;margin-bottom:1em;}
+.h4 {font-size: 1.125em;line-height: 1.2em;margin-top:1.33em;margin-bottom:1.33em;}
+.h5 {font-size: 1em;line-height: 1.12em;text-transform: uppercase;margin-top:1.67em;margin-bottom:1.67em;}
+
+
+p {
+	
+}
+
+a {
+	color:inherit;
+	text-decoration:none;
+}
+
+blockquote {
+	font-size: 1.5em;
+	line-height:1.46em;
+	font-style:italic;
+	position: relative;
+
+	font-family:'Georgia';
+	border-left:3px solid #ccc;
+
+	margin:$space*2;
+	padding-left:$space;
+}
+
+em {
+	display: inline-block;
+	font-family:'Georgia';
+}
+.em {
+	font-style: italic;
+}
+
+code {
+	background-color: #efefef;
+	padding:0 $space/3;
+	border-radius:$space/2;
+	display: inline-block;
+}
+
+
+// ------------------------
+// 		Body Copy
+// 
+// Inside `.body-copy`, type can be styled accordingly
+
+.body-copy {
+	
+	h1, h2, h3, h4, h5, h6 {
+	
+	}
+
+	p {
+		
+	}
+
+	a {
+		border-bottom:1px dashed;
+
+		&:hover {
+			color:$colour-light;
+		}
+	}
+
+	.list {
+
+	}
+
+}
+
+@media screen and (max-width:40rem) {
+	.body-copy.pad_lg {
+		padding-left:1.5rem;
+		padding-right:1.5rem;
+	}
+}
+
+// --------------------------------
+// 		Typographic Helpers
+// 
+
+.text-colour_white {
+	color:#fff;
+}
+
+.text-colour_black {
+	color:#333;
+}
+
+.text-colour_dark {
+	color:$colour-dark;
+}
+
+.text-colour_medium {
+	color:$colour-medium;
+}
+
+.text-colour_light {
+	color:$colour-light;
+}
+
+.text-colour_highlight {
+	color:$colour-highlight;
+}
+
+// Add this class, and a definitive width for a trailing ellipse
+// `...`
+.truncate {
+	@include truncate;
+}

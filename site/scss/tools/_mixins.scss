@@ -1,0 +1,19 @@
+// Proportional element
+@mixin square($param) {
+	height: $param;
+	width: $param;
+}
+
+// Adds an ellipsis on overflowing text
+@mixin truncate {
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+// Vertically align an element!
+@mixin v-align{
+	transform:translate(0, -50%);
+	position: relative;
+	top:50%;
+}

@@ -1,0 +1,104 @@
+
+
+// The $space variable is set to 16px, which is equal to 1em, if the body font-size is set to 100%;
+// $space: 1rem;
+
+.section {
+	@extend %cf;
+	padding-top:$space * 2;
+	padding-bottom:$space * 2;
+	margin-right:auto;
+	margin-left:auto;
+
+	max-width:1800px;
+}
+
+// padding ----------------------
+
+.pad_xs		{padding:$space / 4;}
+.pad_sm		{padding:$space / 2;}
+.pad 		{padding:$space;}
+.pad_lg 	{padding:$space * 3;}
+.pad_xl 	{padding:$space * 6;}
+
+.pad-v_xs	{padding-top:$space / 4;padding-bottom:$space / 4;}
+.pad-v_sm	{padding-top:$space / 2;padding-bottom:$space / 2;}
+.pad-v 		{padding-top:$space; padding-bottom:$space;}
+.pad-v_lg 	{padding-top:$space * 3;padding-bottom:$space * 3;}
+.pad-v_xl 	{padding-top:$space * 6;padding-bottom:$space * 6;}
+
+.pad-h_xs 	{padding-left:$space / 4;padding-right:$space / 4;}
+.pad-h_sm 	{padding-left:$space / 2;padding-right:$space / 2;}
+.pad-h 		{padding-left:$space;padding-right:$space;}
+.pad-h_lg	{padding-left:$space * 3;padding-right:$space * 3;}
+.pad-h_xl	{padding-left:$space * 6;padding-right:$space * 6;}
+
+.pad-b_xs	{padding-bottom:$space / 4;}
+.pad-b_sm	{padding-bottom:$space / 2;}
+.pad-b 		{padding-bottom:$space;}
+.pad-b_lg	{padding-bottom:$space * 3;}
+.pad-b_xl	{padding-bottom:$space * 6;}
+
+.pad-t_xs 	{padding-top:$space / 4;}
+.pad-t_sm 	{padding-top:$space / 2;}
+.pad-t 		{padding-top:$space;}
+.pad-t_lg 	{padding-top:$space * 3;}
+.pad-t_xl 	{padding-top:$space * 6;}
+
+.pad-l_xs 	{padding-left:$space / 4;}
+.pad-l_sm 	{padding-left:$space / 2;}
+.pad-l 		{padding-left:$space;}
+.pad-l_lg 	{padding-left:$space * 3;}
+.pad-l_xl 	{padding-left:$space * 6;}
+
+.pad-r_xs 	{padding-right:$space / 4;}
+.pad-r_sm 	{padding-right:$space / 2;}
+.pad-r 		{padding-right:$space;}
+.pad-r_lg 	{padding-right:$space * 3;}
+.pad-r_xl 	{padding-right:$space * 6;}
+
+
+// margin --------------------------
+
+.mar_xs		{margin:$space / 4;}
+.mar_sm		{margin:$space / 2;}
+.mar		{margin:$space;}
+.mar_lg		{margin:$space * 3;}
+.mar_xl		{margin:$space * 6;}
+
+.mar-v_xs	{margin-top:$space / 4;margin-bottom:$space / 4;}
+.mar-v_sm	{margin-top:$space / 2;margin-bottom:$space / 2;}
+.mar-v 		{margin-top:$space;margin-bottom:$space;}
+.mar-v_lg 	{margin-top:$space * 3;margin-bottom:$space * 3;}
+.mar-v_xl 	{margin-top:$space * 6;margin-bottom:$space * 6;}
+
+.mar-h_xs	{margin-left:$space / 4;margin-right:$space / 4;}
+.mar-h_sm	{margin-left:$space / 2;margin-right:$space / 2;}
+.mar-h 		{margin-left:$space;margin-right:$space;}
+.mar-h_lg	{margin-left:$space * 3;margin-right:$space * 3;}
+.mar-h_xl	{margin-left:$space * 6;margin-right:$space * 6;}
+
+.mar-t_xs	{margin-top:$space / 4;}
+.mar-t_sm 	{margin-top:$space / 2;}
+.mar-t 		{margin-top:$space;}
+.mar-t_lg 	{margin-top:$space * 3;}
+.mar-t_xl 	{margin-top:$space * 6;}
+
+.mar-b_xs	{margin-bottom:$space / 4;}
+.mar-b_sm	{margin-bottom:$space / 2;}
+.mar-b 		{margin-bottom:$space;}
+.mar-b_lg	{margin-bottom:$space * 3;}
+.mar-b_xl	{margin-bottom:$space * 6;}
+
+.mar-l_xs 	{margin-left:$space / 4;}
+.mar-l_sm 	{margin-left:$space / 2;}
+.mar-l 		{margin-left:$space;}
+.mar-l_lg 	{margin-left:$space * 3;}
+.mar-l_xl 	{margin-left:$space * 6;}
+
+.mar-r_xs	{margin-right:$space / 4;}
+.mar-r_sm	{margin-right:$space / 2;}
+.mar-r 		{margin-right:$space;}
+.mar-r_lg 	{margin-right:$space * 3;}
+.mar-r_xl	{margin-right:$space * 6;}
+

@@ -1,0 +1,21 @@
+button {
+	background-color:transparent;
+	border-style:solid;
+	border-width:2px;
+	border-color: transparent;
+	display: block;
+}
+
+.btn,
+%btn {
+	border-color:#444;
+	color:#444;
+	font-size: 1rem;
+
+	padding:$space/1.6 $space*1.4;
+}
+
+.btn-round {
+	@extend %btn;
+	border-radius:$space * 2;
+}

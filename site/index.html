@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Slim SCSS</title>
+
+	<!-- The Meta Fun -->
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Open Graph Markup for Social Sharing -->
+	<meta property="og:title"       content="" />
+	<meta property="og:type"        content="" />
+	<meta property="og:url"         content="" />
+	<meta property="og:image"       content="" />
+	<meta property="og:site_name"   content="" />
+	<meta property="og:description" content="" />
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/main.css">
+	
+	<!-- Options -->
+	
+	<!-- Load Fontawesome from CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+	
+	<!-- Bootstrap CSS / JS 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+	
+	<!-- Angular 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>-->
+
+	<!-- Load Scripts -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/modernizr.custom.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper col-9 middle">
+	
+	<main>
+			
+		<section class="section">
+			<div class="text-center">
+				<h1 class="mar-v h1 text-colour_light">Slim Starterkit</h1>
+				<h4 class="h4">a rapid prototyping starterkit &amp; build process for in-browser prototyping.</h4>
+			</div>
+		
+			<header class="nav-main pad-v_lg" id="menu">
+				
+				<div class="cf">
+					<div class="fl-l">
+						<h5>Table of Contents</h5>
+					</div>
+					<div class="fl-r text-colour_highlight pad-l">
+						<a href="https://twitter.com/simgooder" class="d-ib pad_sm">
+							<span class="fa fa-twitter"></span>
+						</a>
+						<a href="https://github.com/simgooder" class="d-ib pad_sm">
+							<span class="fa fa-github"></span>
+						</a>
+					</div>
+				</div>
+		
+				<nav class="text-colour_light">
+					<div class="menu">
+						<a href="#intro">introduction</a>
+						<a href="#syntax">syntax</a>
+						<a href="#toolkit">toolkit</a>
+						<a href="#patterns">common patterns</a>
+						<a href="#typography">typography</a>
+						<a href="#grid">the grid</a>
+					</div>
+				</nav>
+		
+			</header>
+		
+		</section>	
+	
+		<section class="section col-9 middle">
+			<h2 class="h2 text-colour_light" id="intro">
+				introduction
+			</h2>
+			<div class="body-copy">
+				<p>
+					Slim Starterkit is a plug-and-play, in-browser prototyping toolkit, created to jump-start high-fidelity prototyping. 
+					Slim Starterkit is NOT a framework, nor was it made for use in production. It's merely an attempt to bundle some helpful tools that I normally use in my workflow, as well as some top-notch default settings to ease the setup process.
+				</p>
+			</div>
+		</section>
+	
+		<section class="section col-9 middle">	
+			<div id="syntax">
+				<h2 class="text-colour_light h2 d-ib">
+					rapid prototyping syntax
+				</h2>
+				<div class="fa fa-link d-ib"></div>
+				<p>
+					The syntax has been formulated for optimal typing speed. A class system based on common patterns for layout, spacing, positioning, typography and even common design patterns, like cards. Classnames are aptly named using an easy-to-memorize syntax, and most class functions are atomic in structure.
+				</p>
+				<p>
+					All positioning and spacing classes use a variable called <code>$space</code> which represents <code>1rem</code>. The font-size is set to 100% on the body tag, meaning <code>$space = 1rem = 16px</code>.
+				</p>
+			</div>	
+			<div class="row text-center">
+				<h5 class="text-left h5">
+					Atomic CSS Legend
+				</h5>
+				<table class="col-12">
+					<tr>
+						<th>Namespace</th>
+						<th>Description</th>
+						<th>Type</th>
+						<th>Usage</th>
+					</tr>
+					<tr>
+						<td>
+							<em>mar</em>
+						</td>
+						<td>
+							margin
+						</td>
+						<td>
+							<em>prefix</em>
+						</td>
+						<td>
+							.mar-*
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>pad</em>
+						</td>
+						<td>
+							padding
+						</td>
+						<td>
+							<em>prefix</em>
+						</td>
+						<td>
+							.pad-*
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>pos</em>
+						</td>
+						<td>
+							position
+						</td>
+						<td>
+							<em>prefix</em>
+						</td>
+						<td>
+							.pos-*
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>v</em>
+						</td>
+						<td>
+							vertical
+						</td>
+						<td>
+							<em>-suffix</em>
+						</td>
+						<td>
+							.*-v
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>h</em>
+						</td>
+						<td>
+							horizontal
+						</td>
+						<td>
+							<em>-suffix</em>
+						</td>
+						<td>
+							.*-h
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>t</em>
+						</td>
+						<td>
+							top
+						</td>
+						<td>
+							<em>-suffix</em>
+						</td>
+						<td>
+							.*-t
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>b</em>
+						</td>
+						<td>
+							bottom
+						</td>
+						<td>
+							<em>-suffix</em>
+						</td>
+						<td>
+							.*-b
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>l</em>
+						</td>
+						<td>
+							left
+						</td>
+						<td>
+							<em>-suffix</em>
+						</td>
+						<td>
+							.*-l
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>r</em>
+						</td>
+						<td>
+							right
+						</td>
+						<td>
+							<em>-suffix</em>
+						</td>
+						<td>
+							.*-r
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>xs</em>
+						</td>
+						<td>
+							.25rem
+						</td>
+						<td>
+							<em>_suffix</em>
+						</td>
+						<td>
+							.*_xs
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>sm</em>
+						</td>
+						<td>
+							.5rem
+						</td>
+						<td>
+							<em>_suffix</em>
+						</td>
+						<td>
+							.*_sm
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>lg</em>
+						</td>
+						<td>
+							3rem
+						</td>
+						<td>
+							<em>_suffix</em>
+						</td>
+						<td>
+							.*_lg
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<em>xl</em>
+						</td>
+						<td>
+							6rem
+						</td>
+						<td>
+							<em>_suffix</em>
+						</td>
+						<td>
+							.*_xl
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="row">
+				<h5 class="h5">Example</h5>
+				<code>.mar-v_lg { margin-top:$space * 3;margin-bottom:$space * 3; }</code>
+				<em class="d-b pad">or</em>
+				<code>.mar-v_lg { margin-top:48px;margin-bottom:48px; }</code>
+			</div>
+		</section>
+	
+		<section class="section col-9 middle body-copy">
+			<div id="toolkit">
+				<h2 class="text-colour_light h2 d-ib">toolkit</h2><div class="fa fa-link d-ib"></div>
+				<p>This grunt task-set has everything you need to get started (static-file server, sass-compiler) set up based around the existing folder structure, so all you have to do is type in a few grunt commands, and you're ready to roll.</p>
+				<p>
+					<h5 class="h5">Features</h5>
+					<ul class="list">
+						<li>Static file server 
+							-<a class="em" href="https://www.npmjs.com/package/grunt-web-server">
+								grunt-web-server
+							</a>
+						</li>
+						<li>Sass Compiler 
+							-<a class="em" href="https://github.com/sindresorhus/grunt-sass">
+								grunt-sass
+							</a>
+						</li>
+						<li>Autoprefixer 
+							-<a class="em" href="https://github.com/postcss/autoprefixer">
+								Post-CSS
+							</a>	
+						</li>
+						<li>Browser refreshing / Style-injection 
+							-<a class="em" href="http://www.browsersync.io/">
+								Browsersync
+							</a>
+						</li>
+						<li>HTML templating system 
+							-<a class="em" href="https://github.com/MathiasPaumgarten/grunt-bake">
+								grunt-bake
+							</a>
+						</li>
+						<li>File Watch 
+							-<a class="em" href="https://github.com/gruntjs/grunt-contrib-watch">
+								grunt-contrib-watch
+							</a>
+						</li>
+					</ul>
+				</p>
+				<h5 class="h5">Directions</h5>
+				<ol>
+					<li>Open Terminal</li>
+					<li>Navigate to your project folder root</li>
+					<li>Type <code>`grunt server`</code>. This will start your static file server</li>
+					<li>Open another terminal window in the folder root and type <code>`grunt`</code></li>
+					<li>Start coding</li>
+				</ol>
+				
+				<p>
+					With these two processes running, you can now code without worrying about refreshing the page, compiling your Sass, or prefixing your code. Follow the same process every time to spin up a server and start coding in no time. 
+				</p>
+		
+				<h5 class="h5">Bonus</h5>
+				<p>In addition to the grunt tasks, there is a small selection of even more useful tidbits baked right in: 
+					<ul class="list">
+						<li><a href="https://modernizr.com/">Modernizr</a></li>
+						<li><a href="https://jquery.com/">jQuery</a></li>
+						<li><a href="https://fortawesome.github.io/Font-Awesome/">FontAwesome </a>(via CDN)</li>
+						<li><a href="http://getbootstrap.com/">Bootstrap </a>(via CDN)</li>
+						<li><a href="https://angularjs.org/">Angular </a>(via CDN)</li>
+					</ul>
+			</div>
+		</section>
+	
+		<section class="section col-9 middle">
+			<div id="patterns">
+				<h2 class="text-colour_light h2 d-ib">common patterns</h2><div class="fa fa-link d-ib"></div>
+				<p>
+					Aside from basic positioning &amp; spacing, a small collection of helper classes &amp; mixins built around common patterns will assist in speedily building out testable prototypes.
+					There is also a colour-theming system based on the colour palette which is located in <code>base/_variables.scss </code>. 
+				</p>
+			</div>
+			<div class="row">
+				<h5 class="h5">Examples</h5>
+				<div class="row">
+					<div class="card pad-h pad-v text-center col-6 middle">
+						<h4>This is a <code>.card</code> helper class</h4>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="d-ib mar-h_sm">
+						<button class="btn">Contextual Button</button>
+					</div>
+					<div class="d-ib mar-l_sm mar-t">
+						<button class="btn-round">Round Button</button>
+					</div>
+				</div>
+				<div class="row pad-v text-center">
+					<div class="fl-l col-6 pad">
+						<div class="circle-container middle">
+							<img class="img" src="https://placecage.com/300/300" alt="">
+						</div>
+						<em class="pad-t">Nicolas Cage wrapped with <code>.circle-container</code></em>
+					</div>
+					<div class="fl-l col-6 pad">
+						<div class="circle-container middle mask">
+							<img class="img-align" src="https://placecage.com/300/300" alt="" width="300">
+						</div>
+						<em class="pad-t">Nicolas Cage wrapped with <code>.circle-container</code> &amp; utilizing the <code>.img-align</code> class on the image tag.</em>
+					</div>
+				</div>
+				<div class="col-6 pad theme-dark card middle mar-v">
+					<p>Nicolas Cage is not a helper class, but <code>.theme-dark</code> is.</p>
+				</div>
+				<div class="col-5 pad theme-light card middle">
+					<p>This card uses <code>.theme-light</code>.</p>
+				</div>
+			</div>	
+		</section>	
+		
+		<section class="section col-9 middle body-copy">
+			<div id="typography">
+				<h2 class="text-colour_light h2 d-ib">typography</h2><div class="fa fa-link d-ib"></div>
+				<p>
+					Headings are scaled using a<a href="http://typecast.com/blog/a-more-modern-scale-for-web-typography"> technique</a> provided by Typecast. The default font-stack utilizes the reader's operating system's<a href="https://medium.com/@mwichary/system-shock-6b1dc6d6596f#.9rbfajgsf"> default font family.</a>
+				</p>
+				<div class="row">
+					<h5 class="h5">The Stack</h5>
+					<code>
+						$default-font-stack:'San Francisco', 'Oxygen', 'Ubuntu', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+					</code>
+				</div>
+			</div>
+			<h5 class="h5">Example</h5>
+			<div class="col-10 middle card pad_lg body-copy">
+				<h3 class="h3">
+					It wasn't a dream
+				</h3>
+				<p>
+				One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.
+				</p>
+				<blockquote>A collection of textile samples lay spread out on the table</blockquote>
+				<p>
+				It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.
+				</p>
+				<h4 class="mar-v h4">
+					This list
+				</h4>
+				<ul class="list">
+					<li>An illustrated magazine</li>
+					<li>A proper human room</li>
+					<li>A lady fitted out with a fur hat</li>
+					<li>The bedding was hardly able to cover it</li>
+					<li>A collection of textile samples</li>
+				</ul>
+			</div>
+		</section>
+	
+		<section class="section col-9 middle">	
+			<div id="grid">
+				<h2 class="text-colour_light h2 d-ib">the grid</h2><div class="fa fa-link d-ib"></div>
+				<p>
+					We've always gotta talk about the grid. Well, this grid system is nothing special. It's been wrangled using common systems, covering all basic needs without diving too deep. It's a float-based grid, &amp; built using a customizable <a href="http://sass-lang.com/">Sass</a> function.
+				</p>
+				<h5 class="h5">Example</h5>
+				<code>&lt;div class="col col-6"&gt; column content with 50% width &lt;/div&gt;</code>
+				<em class="pad d-b">or</em>
+				<code>&lt;div class="middle col-6"&gt; for centered column content width 50% width &lt;/div&gt;</code>
+			</div>	
+			
+			<div class="row text-center">
+				<em class="text-left d-b pad-v_sm">A normal, no-nonsense grid for basic layouts.</em>
+				<div class="col theme-light pad-v_sm col-2">.col-2</div>
+				<div class="col theme-light pad-v_sm col-3">.col-3</div>
+				<div class="col theme-light pad-v_sm col-3">.col-3</div>
+				<div class="col theme-light pad-v_sm col-4">.col-4</div>
+				<div class="col theme-light pad-v_sm col-5">.col-5</div>
+				<div class="col theme-light pad-v_sm col-2">.col-2</div>
+				<div class="col theme-light pad-v_sm col-4">.col-4</div>
+				<div class="col theme-light pad-v_sm col-1">.col-1</div>
+			</div>
+		
+			<div class="row-spaced text-center">
+				<em class="text-left d-b pad-v_sm">A grid wrapped in <code>.row-spaced</code> for that customizable gutter you love so much.</em>
+				<div class="theme-dark cf pad-t_sm">
+					<div class="col theme-light pad-v_sm col-4">.col-11</div>
+					<div class="col theme-light pad-v_sm col-8">.col-1</div>
+					<div class="col theme-light pad-v_sm col-6">.col-6</div>
+					<div class="col theme-light pad-v_sm col-6">.col-6</div>
+				</div>
+			</div>
+		</section>			
+			
+		<footer class="vw relative mar-t_lg">
+			<a href="#menu">
+				<div class="nav-secondary">
+					<div class="-fa fa-bars"></div>
+					Menu
+				</div>
+			</a>
+		</footer>	
+			
+	</main>	
+
+</div><!-- wrapper -->
+
+
+</body>
+</html>

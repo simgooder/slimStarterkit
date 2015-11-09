@@ -1,0 +1,14 @@
+// This is a font stack to use the OS' default font
+$system-font-stack: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Oxygen', 'Ubuntu', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+
+// The $space variable is set to 16px, which is equal to 1em, if the body font-size is set to 100%;
+$space: 1rem;
+
+// Standard border-radius
+$radius:$space/2;
+
+// Demo Colour Palette
+$colour-dark:#152744;
+$colour-medium:#367591;
+$colour-light:#61D2B4;
+$colour-highlight:#9DFDC7;

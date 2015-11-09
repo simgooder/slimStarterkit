@@ -1,0 +1,21 @@
+// Micro Clearfix
+// Nicolas Gallagher - http://nicolasgallagher.com/micro-clearfix-hack/
+
+.cf:before,
+.cf:after,
+%cf:before,
+%cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after,
+%cf:after {
+    clear: both;
+}
+
+// IE 6/7
+.cf,
+%cf {
+    *zoom: 1;
+}
