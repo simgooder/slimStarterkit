@@ -19,13 +19,13 @@ __New to Grunt or Node Package Manager (NPM)?__
 - [Node Package Manager](https://www.npmjs.com/)
 
 ##### What's in the kit?
-[Grunt](http://gruntjs.com/) task runner
-	- Static file server - [grunt-web-server](https://www.npmjs.com/package/grunt-web-server)
-	- Sass Compiler - [grunt-sass](https://github.com/sindresorhus/grunt-sass)
-	- [Autoprefixer](https://github.com/postcss/autoprefixer) - [Post-CSS](https://github.com/postcss/postcss)
-	- Browser refreshing / Style-injection - [Browsersync](http://www.browsersync.io/)
-	- HTML templating system - [grunt-bake](https://github.com/MathiasPaumgarten/grunt-bake)
-	- File Watch - [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
+[Grunt](http://gruntjs.com/) task runner  
+	- Static file server - [grunt-web-server](https://www.npmjs.com/package/grunt-web-server)  
+	- Sass Compiler - [grunt-sass](https://github.com/sindresorhus/grunt-sass)  
+	- [Autoprefixer](https://github.com/postcss/autoprefixer) - [Post-CSS](https://github.com/postcss/postcss)  
+	- Browser refreshing / Style-injection - [Browsersync](http://www.browsersync.io/)  
+	- HTML templating system - [grunt-bake](https://github.com/MathiasPaumgarten/grunt-bake)  
+	- File Watch - [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)  
 [Modernizr](https://modernizr.com/) ([flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), Canvas & SVG ready)  
 [jQuery](https://jquery.com/download/)  
 [FontAwesome](https://fortawesome.github.io/Font-Awesome/icons/)  
