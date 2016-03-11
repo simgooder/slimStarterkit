@@ -1,3 +1,16 @@
+
+@mixin clearfix {
+	&:before,
+	&:after {
+	    content: " ";
+	    display: table;
+	}
+}
+
+.cf:after {
+    clear: both;
+}
+
 // Proportional element
 @mixin square($param) {
 	height: $param;

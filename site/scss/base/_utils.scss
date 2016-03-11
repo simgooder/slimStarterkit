@@ -1,0 +1,21 @@
+
+
+.cf {
+	@include clearfix;
+}
+
+// Add this class, and a definitive width for a trailing ellipse
+// `...`
+.truncate {
+	@include truncate;
+}
+
+// Alignment
+.middle  {margin-left: auto;margin-right:auto;}
+.v-align {@include v-align;}
+
+// Floats
+
+// Floats
+.fl-l {float:left;}
+.fl-r {float:right;}

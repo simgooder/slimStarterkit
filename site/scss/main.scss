@@ -4,37 +4,35 @@
 *
 */
 
-//     Tools   
-//----------------------
-@import 'tools/variables',
-        'tools/mixins',
-        'tools/extends',
-        'tools/helpers'
-;        
-
 //     Base    
 //----------------------
 @import 'base/reset',
+        'base/variables',
+        'base/mixins',
+        'base/media-queries',
+        'base/utils',
         'base/typography'
 ;
 
 //     Modules 
 //----------------------
-@import 'modules/buttons',
+@import 'modules/grid',
+        'modules/type',
+        'modules/buttons',
         'modules/forms',
-        'modules/lists',
-        'modules/tables',
-        'modules/images',
-        'modules/general'
+        'modules/images'
 ;  
 
 //     Layout  
 //----------------------
-@import 'layout/grid',
-        'layout/positioning',
+@import 'layout/positioning',
         'layout/spacing',
-        'layout/responsive'
+        'layout/nav'
 ;  
+
+//     Components
+//----------------------
+//@import ;  
 
 //     States  
 //----------------------
@@ -42,10 +40,5 @@
 
 ; 
 
-//     Theme   
-//----------------------
-@import 'theme/theme'
-
-; 
 
 

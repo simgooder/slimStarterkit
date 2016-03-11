@@ -1,0 +1,49 @@
+// Media Query Mixins
+
+$breakpoint-sm: 650px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1024px;
+
+// General Mobile View -- from 0px to $breakpoint-sm
+@mixin mq-sm {
+  @media screen and (max-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+// General Tablet View -- between mobile & desktop
+@mixin mq-md {
+  @media screen and (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+
+// General Desktop View
+@mixin mq-lg {
+  @media screen and (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+// Custom Media Query
+@mixin mq($custom) {
+  @media screen and (max-width: #{$custom}) {
+    @content;
+  }
+}
+
+// Custom Min-Width Media Query
+@mixin mq-min($custom) {
+  @media screen and (min-width: #{$custom}) {
+    @content;
+  }
+}
+
+
+// Custom Between Media Query
+@mixin mq-between($min, $max) {
+  @media (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}

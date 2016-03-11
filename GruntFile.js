@@ -1,7 +1,7 @@
 /* 
-	This is the Grunt Workflow for Spotful Style
+	This is the Grunt Workflow for small projects
 	Author: Simon Gooder
-	Todo: grunt-concurrent
+	Version: 0.4
 */
 
 'use strict';
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 		web_server: {
 		    options: {
 		      cors: true,
-		      port: 8000
+		      port: 7000
 		    },
 		    foo: 'bar' // Apparently this is necessary
 		},
@@ -32,15 +32,21 @@ module.exports = function(grunt) {
 				files:'site/scss/**/*.scss',
 				tasks:['sass', 'postcss'],
 			},
+			gruntfile: {
+			  	files: ['Gruntfile.js']
+			},
 			bake: {
-		        files: [ 'site/templates/*.html' ],
+		        files: [ 'site/partials/*.html' ],
 		        tasks: ['bake'],
 		    }
 		},
 		// Compile Sass
 		sass: {
 	        options: {
-	            sourceMap: true
+	            sourceMap: true,
+	            sourceMapEmbed: false,
+	            sourceMapContents: true,
+	            outputStyle: 'compressed',
 	        },
 	        dist: {
 	            files: {
@@ -55,13 +61,14 @@ module.exports = function(grunt) {
 		      // watch these files for change
 		      src: [
 		        "site/css/*.css",
-		        "site/*.html"
+		        "site/*.html",
+		        "site/partials/*.html"
 		      ]
 		    },
 		    options: {
 		      watchTask: true,
 		      // The index file to serve
-		      proxy: "http://localhost:8000/site/index.html",
+		      proxy: "http://localhost:7000/site/index.html",
 		    }
 		  }
 		},
@@ -71,7 +78,7 @@ module.exports = function(grunt) {
 		      map: false,
 		      processors: [
 		        require('autoprefixer')({
-		        	browsers: ['> 1%', 'Explorer 8']
+		        	browsers: ['> 1%', 'Explorer 10']
 		        })
 		      ]
 		    },
@@ -81,11 +88,12 @@ module.exports = function(grunt) {
 		    	}
 		    }
 		},
+		// Compile HTML partials
 		bake: {
 	        your_target: {
-
 	            files: {
-	                "site/index.html" : "site/templates/index.html"
+	            	// List the outputting pages here
+	                "site/index.html" : "site/partials/main.html"
 	            }
 	        }
 	    },
@@ -98,7 +106,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-web-server');
 	grunt.loadNpmTasks('grunt-postcss');
-	grunt.loadNpmTasks( 'grunt-bake');
+	grunt.loadNpmTasks('grunt-bake');
 
 	// Default task(s).
   	grunt.registerTask('default', ['bake','browserSync','postcss','watch']);

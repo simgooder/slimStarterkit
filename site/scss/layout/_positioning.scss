@@ -1,15 +1,4 @@
 
-// Alignment
-.text-center  {text-align: center;}
-.text-left    {text-align: left;}
-.text-right   {text-align: right;}
-
-.middle  {margin-left: auto;margin-right:auto;}
-.v-align {@include v-align;}
-
-// Floats
-.fl-l {float:left;}
-.fl-r {float:right;}
 
 // Displays
 .d-i {display: inline;}
@@ -21,11 +10,6 @@
 .relative {position: relative;}
 .fixed	  {position:fixed;}
 .static	  {position: static;}
-
-.pos-t {top:0;}
-.pos-b {bottom:0;}
-.pos-l {left:0;}
-.pos-r {right:0;}
 
 // Viewport proportions
 .vh {height:100%;height:100vh;}
