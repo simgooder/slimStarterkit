@@ -1,6 +1,6 @@
 {
   "name": "starterkit",
-  "version": "0.4",
+  "version": "0.5",
   "description": "a starterkit for web projects",
   "main": "GruntFile.js",
   "author": "Simon Gooder - @simgooder",

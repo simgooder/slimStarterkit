@@ -1,4 +1,4 @@
-# SlimStarterkit v0.4
+# SlimStarterkit v0.5
 
 
 __Directions__   
@@ -8,17 +8,17 @@ __Directions__
 4. `grunt server` starts the server  
 5. In a new tab, `grunt` starts the build process  
 6. This process will automatically open the site in your default browser  
-7. Write code. Enjoy browser refreshing, CSS injecting and templating with HTML partials.   
-
-__A note about Grunt-Bake__  
-In the `partials/` directory, there's a file called `main.html`. This file compiles into `index.html` in the root of your project folder. Partials are imported using the Grunt-Bake syntax which is just `<!--(bake path/to/fileName.html)-->`.   
-*This package hasn't been updated in a long time, but it works well, and it's ideal for small projects.*  
+7. Write code. Enjoy browser refreshing and live CSS injection.   
 
  
 -----
+__Updates__ - *v0.5*
+- Removed Grunt Bake dependency - because it's old, and Jekyll is awesome
+- Cleaned up GruntFile.js
+- Re-wrote the `README.md`
+
 __Updates__ - *v0.4*
 - Cleaned up GruntFile.js
 - Removed the pretentious `readme.md`
-- Grunt-Bake examples, and partials folder
 - Modified SCSS Reset
 - Updated from Autoprefixer-Core to Autoprefixer PostCSS Module
