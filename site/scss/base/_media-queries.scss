@@ -1,19 +1,19 @@
 // Media Query Mixins
 
-$breakpoint-sm: 650px;
-$breakpoint-md: 1024px;
-$breakpoint-lg: 1024px;
+$bp-sm: 760px;
+$bp-md: 1024px;
+$bp-lg: 1260px;
 
-// General Mobile View -- from 0px to $breakpoint-sm
+// General Mobile View -- from 0px to $bp-sm
 @mixin mq-sm {
-  @media screen and (max-width: #{$breakpoint-sm}) {
+  @media screen and (max-width: #{$bp-sm}) {
     @content;
   }
 }
 
 // General Tablet View -- between mobile & desktop
 @mixin mq-md {
-  @media screen and (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md}) {
+  @media screen and (min-width: #{$bp-sm}) {
     @content;
   }
 }
@@ -21,7 +21,7 @@ $breakpoint-lg: 1024px;
 
 // General Desktop View
 @mixin mq-lg {
-  @media screen and (min-width: #{$breakpoint-lg}) {
+  @media screen and (min-width: #{$bp-md}) {
     @content;
   }
 }
@@ -45,5 +45,21 @@ $breakpoint-lg: 1024px;
 @mixin mq-between($min, $max) {
   @media (min-width: #{$min}) and (max-width: #{$max}) {
     @content;
+  }
+}
+
+@mixin responsive-grid-break($selector, $max-width) {
+  @media (max-width: $max-width) {
+    #{$selector} {
+      flex-direction: column;
+
+      .col, .col-10, .col-20, .col-25, .col-33, .col-34, .col-50, .col-66, .col-67, .col-75, .col-80, .col-90 {
+        flex: 1;
+        margin-bottom: ($space * 3) / 2;
+        margin-left: 0;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   }
 }

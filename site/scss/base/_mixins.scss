@@ -1,4 +1,3 @@
-
 @mixin clearfix {
 	&:before,
 	&:after {
@@ -7,14 +6,29 @@
 	}
 }
 
-.cf:after {
-    clear: both;
+// Hide things accessibly
+@mixin visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
-// Proportional element
-@mixin square($param) {
-	height: $param;
-	width: $param;
+// placeholder styling
+@mixin placeholder($color) {
+    ::-webkit-input-placeholder {
+        color: $color;      
+    }
+    ::-moz-placeholder {
+        color: $color;     
+    }
+    :-ms-input-placeholder {
+        color: $color;
+    }
 }
 
 // Adds an ellipsis on overflowing text
@@ -22,11 +36,4 @@
 	white-space:nowrap;
 	overflow:hidden;
 	text-overflow:ellipsis;
-}
-
-// Vertically align an element!
-@mixin v-align{
-	transform:translate(0, -50%);
-	position: relative;
-	top:50%;
 }

@@ -2,6 +2,10 @@
  // 		Base Typography
 // ---------------------------------
 
+// This is a font stack to use the OS' default font
+$system-font-stack: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Oxygen', 'Ubuntu', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+
+
 html,
 :root {
 	font-size: 16px;

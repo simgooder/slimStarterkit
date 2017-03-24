@@ -1,0 +1,21 @@
+// Inputs ---------
+
+%input--base {
+    font-size: 1em;
+
+    border: 2px solid $color-gray;
+    border-radius: 0.2em;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5em;
+
+    background-color: transparent;
+
+    transition: 0.15s;
+
+    // focus state
+    &:focus {
+        
+    }
+}

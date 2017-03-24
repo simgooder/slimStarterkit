@@ -2,38 +2,107 @@
  // 			The Grid
 // ---------------------------------
 
+  // -----------------------------
+ //             The Grid
+// ---------------------------------
+
 // This is the wrapper class
 .row {
-	width:100%;
-	overflow:auto;
+    width: 100%;
 
-	@extend %cf;
+    display: flex;
 }
 
+    .row-top {
+        align-items: flex-start;
+    }
+    .row-bottom {
+        align-items: flex-end;
+    }
+    .row-center {
+        align-items: center;
+        justify-content: center;
+    }
+    .row-stretch {
+        align-items: stretch;
+    }
+    .row-baseline {
+        align-items: baseline;
+    }
+    .row-between {
+        justify-content: space-between;
+    }
+    .row-around {
+        justify-content: space-around;
+    }
+    .row-wrap {
+        flex-flow: row wrap;
+    }
 
-@media (min-width: 40rem) {
-// This is for everything larger that mobile!
-	
-	// Grid Specific Variables
-	$grid-number: 12;
-	$gutter: 1%;
 
-	.col {
-		margin-left:1%;
-		margin-right:1%;
-		float:left;
-	}
 
-	// generate a grid with gutters
-	@for $i from 1 through $grid-number {
-		.col-#{$i} { width: (100% * $i / $grid-number) - (2 * $gutter); }
-	}
-
+.col {
+  flex: 1 0 auto;
+  display: block;
+  width: 100%;
 }
 
-@media (max-width: 40rem) {
-	.col {
-		margin-left:auto;
-		margin-right:auto;
-	}
-}
+    .col-top {
+      align-self: flex-start;
+    }
+    .col-bottom {
+      align-self: flex-end;
+    }
+    .col-center {
+      align-self: center;
+    }
+
+    .col-10 {
+      flex: 0 0 10%;
+      max-width: 10%;
+    }
+    .col-20 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+    .col-25 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+    .col-33, .col-34 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
+    .col-40 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+    .col-50 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    .col-60 {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+    .col-66, .col-67 {
+      flex: 0 0 66.6666%;
+      max-width: 66.6666%;
+    }
+    .col-75 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+    .col-80 {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+    .col-90 {
+      flex: 0 0 90%;
+      max-width: 90%;
+    }
+
+
+@include responsive-grid-break('.responsive-sm', $bp-sm);
+@include responsive-grid-break('.responsive-md', $bp-md);
+@include responsive-grid-break('.responsive-lg', $bp-lg);

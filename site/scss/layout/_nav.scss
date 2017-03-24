@@ -1,0 +1,107 @@
+.main-header {
+    width: 100%;
+
+    background-color: #efefef;
+}
+
+    .main-header--container {
+        width: 100%;
+        max-width: $bp-lg;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+
+        @include mq-md {
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        @include mq-sm {
+            padding-left: 1em;
+            padding-right: 1em;
+
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+    }
+
+        // Mobile Menu ----
+        .main-header--mobile-menu__open,
+        .main-header--mobile-menu__close {
+            @include mq-md {
+                display: none;
+            }
+            @include mq-sm {
+                display: block;
+                margin-left: auto;
+
+                cursor: pointer;
+            }
+        }
+        .main-header--mobile-menu__close {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            font-size: 3em;
+            line-height: 1;
+
+            padding-left: 0.2em;
+            padding-right: 0.3em;
+            padding-bottom: 0.2em;
+        }
+
+
+        .main-header--logo {
+           
+        }
+
+        .main-header--nav {
+            margin-left: auto;
+
+            @include mq-md {
+
+            }
+            @include mq-sm {
+                position: fixed;
+                top: 0;
+
+                width: 98%;
+                max-width: 30em;
+                height: 100%;
+
+                padding-top: 4em;
+                padding-left: 2em;
+                padding-right: 2em;
+
+                background-color: $color-gray;
+
+                // Hidden state --
+                transition: 0.3s;
+                right: -100%;
+
+                &.-is-open {
+                    right: 0;
+                }
+            }
+        }
+
+            .main-header--nav__item {
+
+                padding-top: 0.65em;
+                padding-bottom: 0.65em;
+
+                @include mq-md {
+                    display: inline-block;
+
+                    &:not(:last-of-type) {
+                        margin-right: 2em;
+                    }
+                }
+                @include mq-sm {
+                    font-size: 1.5em;
+                }
+            }

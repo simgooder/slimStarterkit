@@ -1,7 +1,7 @@
 /* 
 	This is the Grunt Workflow for small projects
 	Author: Simon Gooder
-	Version: 0.4
+	Version: 0.5
 */
 
 'use strict';

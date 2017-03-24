@@ -12,6 +12,14 @@ __Directions__
 
  
 -----
+__Updates__ - *v0.8*
+- Updated `media-query` mixins to reflect `min` values on defaults mixins.
+- Added a mobile navigation menu to the HTML boilerplate
+- Added Twitter Card meta, and standard meta tags
+- Moved grid system to Flex
+- Added default colors
+- Added new files to the SCSS structure for `containers`, `colors`, `typography`.
+
 __Updates__ - *v0.5*
 - Removed Grunt Bake dependency - because it's old, and Jekyll is awesome
 - Cleaned up GruntFile.js

@@ -3,24 +3,33 @@
 <html lang="en">
 
 <head>
+
 	<title>Slim SCSS</title>
 
 	<!-- The Meta Fun -->
 	<meta charset="UTF-8">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="canonical" href="">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#efefef">
 	
 	<!-- Scripts -->
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/scripts.js"></script>
-	<script src="js/modernizr.custom.min.js"></script>
+    <!-- <script src="js/modernizr.custom.min.js"></script> -->
 	
 	<!-- Third Party Assets -->
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
 	
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/main.css">
+
+    <!-- Meta Tags -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
 	<!-- Open Graph Markup for Social Sharing -->
 	<meta property="og:title"       content="" />
@@ -30,19 +39,61 @@
 	<meta property="og:site_name"   content="" />
 	<meta property="og:description" content="" />
 
-	
-	<!-- Options -->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
 
 </head>
 
 <body>
 
-<div class="">
-	
-	<h1>HELLO WORLD</h1>
+    <header class="main-header">
 
-</div><!-- wrapper -->
+        <div class="main-header--container">
+            
+            <div class="main-header--logo">
+                LOGO    
+            </div>
 
+            <div class="main-header--mobile-menu__open" data-nav-toggle aria-label="Open Navigation Menu">
+                MENU
+            </div>
+
+            <nav class="main-header--nav" role="navigation" data-nav-menu>
+                
+                <button class="main-header--mobile-menu__close" data-nav-toggle aria-label="Close Navigation Menu">
+                    &times;
+                </button>
+
+                <div class="main-header--nav__item">
+                    <a href="#">
+                        Home 
+                    </a>
+                </div>
+                <div class="main-header--nav__item">
+                    <a href="#">
+                        About Us
+                    </a>
+                </div>
+                <div class="main-header--nav__item">
+                    <a href="#">
+                        Our Blogging
+                    </a>
+                </div>
+                <div class="main-header--nav__item">
+                    <a href="#">
+                        Contact Us
+                    </a>
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
 
 </body>
 </html>

@@ -8,6 +8,7 @@
 //----------------------
 @import 'base/reset',
         'base/variables',
+        'base/colors',
         'base/mixins',
         'base/media-queries',
         'base/utils',
@@ -17,7 +18,7 @@
 //     Modules 
 //----------------------
 @import 'modules/grid',
-        'modules/type',
+        'modules/typography',
         'modules/buttons',
         'modules/forms',
         'modules/images'

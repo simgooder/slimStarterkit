@@ -1,16 +1,19 @@
+// Alignment ----
 
+.pos--center  {margin-left: auto;margin-right:auto;}
 
-// Displays
-.d-i {display: inline;}
-.d-b {display: block;}
-.d-ib {display: inline-block;}
+.pos--l {
+    margin-right: auto;
+}
 
-// Positioning
-.absolute {position: absolute;}
-.relative {position: relative;}
-.fixed	  {position:fixed;}
-.static	  {position: static;}
+.pos--r {
+    margin-left: auto;
+}
 
-// Viewport proportions
-.vh {height:100%;height:100vh;}
-.vw {width:100%;width:100vw;}
+.pos--b {
+    margin-top: auto;
+}
+
+.pos--t {
+    margin-bottom: auto;
+}
