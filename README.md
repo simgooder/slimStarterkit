@@ -13,6 +13,16 @@
 
 ----
 
+## How to Git Going
+
+1. `git pull` to pull the latest code.
+2. `git status` to see what changes you've made since the last pull.
+3. `git add .` to add all the files you've changed.
+4. `git commit -m "your special message"` to commit and add a custom commit message.
+5. `git push` to push all your changes back up to the repo.
+
+----
+
 ## To Do
 - [ ] Build *modal* component
 - [ ] Build *card* component
@@ -24,6 +34,12 @@
     - [ ] *Label*
 - [ ] Build *dropdown* component
 - [ ] Build *menu* component
+- [ ] Include icon set
+- [ ] Build *media object* component
+- [ ] Build *media list* component
+- [ ] Style *table* elements
+- [ ] Style responsive media embeds
+- [ ] Implement UNCSS in the build process
 
 -----
 
