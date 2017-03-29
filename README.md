@@ -1,7 +1,8 @@
 # SlimStarterkit v0.5
 
 
-__Directions__   
+## Directions  
+
 1. Open Terminal  
 2. Navigate to the project folder  
 3. `npm install` installs the dependencies (You only need to do this once)  
@@ -10,8 +11,23 @@ __Directions__
 6. This process will automatically open the site in your default browser  
 7. Write code. Enjoy browser refreshing and live CSS injection.   
 
- 
+----
+
+## To Do
+_ Build *modal* component
+_ Build *card* component
+_ Style *button* elements
+_ Style *form* elements
+    _ *Radio*
+    _ *Checkbox*
+    _ *Text input*
+    _ *Label*
+_ Build *dropdown* component
+_ Build *menu* component
+
 -----
+
+## Changelog
 
 __Updates__ - *v1*
 - Introduced new SCSS structure
