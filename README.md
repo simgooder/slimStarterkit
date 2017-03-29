@@ -1,4 +1,4 @@
-# SlimStarterkit v0.5
+# SlimStarterkit v0.1.1
 
 
 ## Directions  
@@ -29,11 +29,11 @@ _ Build *menu* component
 
 ## Changelog
 
-__Updates__ - *v1*
+__Updates__ - *v0.1.1*
 - Introduced new SCSS structure
 - Commencing planning phase
 
-__Updates__ - *v0.8*
+__Updates__ - *v0.0.8*
 - Updated `media-query` mixins to reflect `min` values on defaults mixins.
 - Added a mobile navigation menu to the HTML boilerplate
 - Added Twitter Card meta, and standard meta tags
@@ -41,12 +41,12 @@ __Updates__ - *v0.8*
 - Added default colors
 - Added new files to the SCSS structure for `containers`, `colors`, `typography`.
 
-__Updates__ - *v0.5*
+__Updates__ - *v0.0.5*
 - Removed Grunt Bake dependency - because it's old, and Jekyll is awesome
 - Cleaned up GruntFile.js
 - Re-wrote the `README.md`
 
-__Updates__ - *v0.4*
+__Updates__ - *v0.0.4*
 - Cleaned up GruntFile.js
 - Removed the pretentious `readme.md`
 - Modified SCSS Reset
