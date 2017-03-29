@@ -12,6 +12,11 @@ __Directions__
 
  
 -----
+
+__Updates__ - *v1*
+- Introduced new SCSS structure
+- Commencing planning phase
+
 __Updates__ - *v0.8*
 - Updated `media-query` mixins to reflect `min` values on defaults mixins.
 - Added a mobile navigation menu to the HTML boilerplate

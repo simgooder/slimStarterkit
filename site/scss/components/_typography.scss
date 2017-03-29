@@ -1,5 +1,5 @@
   // -----------------------------
- // 		Base Typography
+ //         Base Typography
 // ---------------------------------
 
 // This is a font stack to use the OS' default font
@@ -8,16 +8,33 @@ $system-font-stack: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Oxygen
 
 html,
 :root {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-	font-family: $system-font-stack;
-	color:#333;
-	line-height:1.5;
+    font-family: $system-font-stack;
+    color:#333;
+    line-height:1.5;
 }
 
 // // Font Families
 // $font-heading: 'Playfair Display', 'Georgia', serif;
 // $font-copy: 'Roboto Mono', 'Lucida Console', Monaco, monospace;
 
+
+
+// Typographic Styles
+
+// Text Alignment
+.text-center  {text-align: center;}
+.text-left    {text-align: left;}
+.text-right   {text-align: right;}
+
+
+// Text Colours
+.text-color {
+
+	&.-dark {
+		color:$color-dark;
+	}
+}
