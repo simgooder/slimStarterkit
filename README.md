@@ -14,16 +14,16 @@
 ----
 
 ## To Do
-_ Build *modal* component
-_ Build *card* component
-_ Style *button* elements
-_ Style *form* elements
-    _ *Radio*
-    _ *Checkbox*
-    _ *Text input*
-    _ *Label*
-_ Build *dropdown* component
-_ Build *menu* component
+- [ ] Build *modal* component
+- [ ] Build *card* component
+- [ ] Style *button* elements
+- [ ] Style *form* elements
+    - [ ] *Radio*
+    - [ ] *Checkbox*
+    - [ ] *Text input*
+    - [ ] *Label*
+- [ ] Build *dropdown* component
+- [ ] Build *menu* component
 
 -----
 
