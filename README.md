@@ -1,4 +1,4 @@
-# SlimStarterkit v0.1.1
+# Slim Starter Kit v0.1.1
 
 
 ## Directions  
