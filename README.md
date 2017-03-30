@@ -24,19 +24,21 @@
 ----
 
 ## To Do
-- [ ] Build *modal* component
-- [ ] Build *card* component
+- [ ] Build/Style *modal* component
+- [ ] Build/Style *card* component
 - [ ] Style *button* elements
 - [ ] Style *form* elements
     - [ ] *Radio*
     - [ ] *Checkbox*
     - [ ] *Text input*
     - [ ] *Label*
-- [ ] Build *dropdown* component
-- [ ] Build *menu* component
+- [ ] Build/Style *switch* component
+- [ ] Build/Style *dropdown* component
+- [ ] Build/Style *menu* component
+- [ ] Build/Style *tooltips* component
 - [ ] Include icon set
-- [ ] Build *media object* component
-- [ ] Build *media list* component
+- [ ] Build/Style *media object* component
+- [ ] Build/Style *media list* component
 - [ ] Style *table* elements
 - [ ] Style responsive media embeds
 - [ ] Implement UNCSS in the build process
