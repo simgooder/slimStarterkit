@@ -1,6 +1,22 @@
 // The $space variable is set to 16px, which is equal to 1em, if the body font-size is set to 100%;
 $space: 1em;
 
+// For rows with gutters
+$gutter-width: 0.5em;
 
-// Colours
-$color-dark: #333;
+// Fonts
+// This is a font stack to use the OS' default font
+$system-font-stack: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Oxygen', 'Ubuntu', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+
+$font-size-meta: 0.85em;
+$font-stack: 'Open Sans', $system-font-stack;
+
+// Form Elements
+$button-height: 2.5em;
+
+// Box Shadow
+$box-shadow-sm: 0em 0.1em 0.25em 0em rgba($color-gray-dark, 0.5);
+
+// Border-radius
+$radius: $space/4;
+$radius-sm: $space/6;

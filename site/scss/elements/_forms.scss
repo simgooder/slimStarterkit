@@ -1,21 +1,27 @@
-// Inputs ---------
-
-%input--base {
-    font-size: 1em;
-
-    border: 2px solid $color-gray;
-    border-radius: 0.2em;
-
+// Form Layout
+@mixin input-group {
+    position: relative;
     width: 100%;
-    margin: 0 auto;
-    padding: 0.5em;
 
-    background-color: transparent;
-
-    transition: 0.15s;
-
-    // focus state
-    &:focus {
-        
+    // Input-groups following input-groups
+    & + & {
+        margin-top: 1em;
     }
+}
+
+.input--group {
+    @include input-group;
+}
+
+
+// Labels ----------
+.input--label {
+    display: inline-block;
+
+    margin-bottom: 0.65em;
+
+    line-height: 1;
+    font-weight: 600;
+    font-size: $font-size-meta;
+    color: $color-dark;
 }

@@ -1,8 +1,9 @@
 // Media Query Mixins
 
-$bp-sm: 760px;
-$bp-md: 1024px;
-$bp-lg: 1260px;
+$bp-sm: 47.5em; // 760px
+$bp-md: 64em;   // 1024px
+$bp-lg: 78.75;  // 1260px
+$bp-xl: 117.5;  // 1880px
 
 // General Mobile View -- from 0px to $bp-sm
 @mixin mq-sm {
@@ -22,6 +23,13 @@ $bp-lg: 1260px;
 // General Desktop View
 @mixin mq-lg {
   @media screen and (min-width: #{$bp-md}) {
+    @content;
+  }
+}
+
+// General Desktop View
+@mixin mq-xl {
+  @media screen and (min-width: #{$bp-xl}) {
     @content;
   }
 }

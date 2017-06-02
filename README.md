@@ -1,4 +1,4 @@
-# Slim Starter Kit v0.1.1
+# Slim Starter Kit v0.1.4
 
 
 ## Directions  
@@ -13,39 +13,37 @@
 
 ----
 
-## How to Git Going
-
-1. `git pull` to pull the latest code.
-2. `git status` to see what changes you've made since the last pull.
-3. `git add .` to add all the files you've changed.
-4. `git commit -m "your special message"` to commit and add a custom commit message.
-5. `git push` to push all your changes back up to the repo.
-
-----
-
 ## To Do
 - [ ] Build/Style *modal* component
-- [ ] Build/Style *card* component
-- [ ] Style *button* elements
+- [ ] Make the dropdown component smarter (be able to accept targets)
 - [ ] Style *form* elements
     - [ ] *Radio*
     - [ ] *Checkbox*
-    - [ ] *Text input*
-    - [ ] *Label*
 - [ ] Build/Style *switch* component
-- [ ] Build/Style *dropdown* component
 - [ ] Build/Style *menu* component
 - [ ] Build/Style *tooltips* component
-- [ ] Include icon set
+- [ ] Include icon set (Material Icons?)
 - [ ] Build/Style *media object* component
 - [ ] Build/Style *media list* component
-- [ ] Style *table* elements
 - [ ] Style responsive media embeds
 - [ ] Implement UNCSS in the build process
 
 -----
 
+## Cool Shit
+
+
+-----
+
 ## Changelog
+
+__Updates__ - *v0.1.4*
+- Styled buttons, tables, cards
+- Defined basic typography scale
+- Designed color functions for color palette generation
+- Added `container` classes
+- Added `positioning` classes
+- Added `responsive-break` classes to grid system
 
 __Updates__ - *v0.1.1*
 - Introduced new SCSS structure

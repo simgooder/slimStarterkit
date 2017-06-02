@@ -6,29 +6,34 @@
 
 //     Utils
 //----------------------
-@import 'utils/variables',
-        'utils/colors',
+@import 'utils/colors',
+        'utils/variables',
         'utils/media-queries',
-        'utils/mixins'
+        'utils/mixins',
+        'utils/functions'
 ;
 
 //     Base    
 //----------------------
-@import 'base/reset',
-        'base/helpers'
+@import 'base/normalize',
+        'base/helpers',
+        'base/base'
 ;
 
 //     Elements
 //----------------------
 @import 'elements/buttons',
         'elements/forms',
+        'elements/inputs',
         'elements/images'
 ;
 
 //     Components
 //----------------------
 @import 'components/nav',
-        'components/typography'
+        'components/typography',
+        'components/card',
+        'components/tables'
 ;  
 
 //     Layout  
@@ -38,3 +43,7 @@
         'layout/spacing',
         'layout/containers'
 ;  
+
+//      Theme
+//-----------------------
+@import 'theme/theme';

@@ -6,6 +6,19 @@
 	}
 }
 
+// Adds a larger hitzone to interactive elements. 
+// Provides a better tap experience on mobile.
+@mixin hitzone($val) {
+    &:after {
+        position: absolute;
+        top: -$val;
+        right: -$val;
+        bottom: -$val;
+        left: -$val;
+        content: ' ';
+    }
+}
+
 // Hide things accessibly
 @mixin visually-hidden {
     border: 0;
@@ -18,10 +31,13 @@
     width: 1px;
 }
 
-// placeholder styling
+// Cross-browser placeholder styling
 @mixin placeholder($color) {
     ::-webkit-input-placeholder {
         color: $color;      
+    }
+    :-moz-placeholder {
+        color: $color;     
     }
     ::-moz-placeholder {
         color: $color;     
@@ -33,7 +49,7 @@
 
 // Adds an ellipsis on overflowing text
 @mixin truncate {
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

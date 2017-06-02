@@ -46,7 +46,8 @@ module.exports = function(grunt) {
 	        },
 	        dist: {
 	            files: {
-	                'site/css/main.css': 'site/scss/main.scss'
+	                'site/css/main.css': 'site/scss/main.scss',
+                    'site/css/theme.css': 'site/scss/theme.scss'
 	            }
 	        }
 		},
@@ -80,7 +81,8 @@ module.exports = function(grunt) {
 		    },
 		    dist: {
 		    	files: {
-		    	  'site/css/main.css' : 'site/css/main.css'
+		    	  'site/css/main.css' : 'site/css/main.css',
+                  'site/css/theme.css' : 'site/css/theme.css'
 		    	}
 		    }
 		},

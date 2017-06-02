@@ -1,0 +1,10 @@
+// Ensures proper color contrast for readability. 
+//  to use: check-text-color($bg-color)
+
+@function check-text-color($color) {
+  @if (lightness($color) > 65) {
+    @return $color-gray-dark; // Lighter backgorund, return dark color
+  } @else {
+    @return $color-white; // Darker background, return light color
+  }
+}

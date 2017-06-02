@@ -2,26 +2,66 @@
  //         Base Typography
 // ---------------------------------
 
-// This is a font stack to use the OS' default font
-$system-font-stack: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Oxygen', 'Ubuntu', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
-
-
 html,
 :root {
-    font-size: 16px;
+    @include mq-sm {
+        font-size: 15px;
+    }
+    @include mq-md {
+        font-size: 16px;
+    }
+    @include mq-xl {
+        font-size: 19px;
+    }
 }
 
 body {
-    font-family: $system-font-stack;
-    color:#333;
-    line-height:1.5;
+    font-family: $font-stack;
+    color: $color-gray-dark;
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
 }
 
-// // Font Families
-// $font-heading: 'Playfair Display', 'Georgia', serif;
-// $font-copy: 'Roboto Mono', 'Lucida Console', Monaco, monospace;
+// Headings
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 3.6rem; line-height: 1.2;
+}
+
+h2 {
+    font-size: 3.0rem; line-height: 1.25;
+}
+
+h3 {
+    font-size: 2.4rem; line-height: 1.3;
+}
+
+h4 {
+    font-size: 1.8rem; line-height: 1.35;
+}
+
+h5 {
+    font-size: 1.5rem; line-height: 1.5;
+}
+
+h6 {
+    font-size: 1.25rem; line-height: 1.6;
+}
+
+p {
+    font-size: 1.1rem; line-height: 1.5;
+}
 
 // Typographic Styles
 
@@ -35,6 +75,6 @@ body {
 .text-color {
 
 	&.-dark {
-		color:$color-dark;
+		color: $color-gray-dark;
 	}
 }

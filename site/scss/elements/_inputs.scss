@@ -1,0 +1,36 @@
+// Inputs ---------
+@mixin input--base {
+    font-size: 1em;
+
+    border: 1px solid $color-gray-light;
+    border-radius: 0.2em;
+
+    width: 100%;
+    height: 2.25em;
+    margin: 0 auto;
+
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+
+    line-height: 1.5;
+
+    background-color: transparent;
+
+    transition: 0.15s;
+
+    // focus state
+    &:focus {
+        outline: 0;
+        border-color: $color-primary-light;
+    }
+}
+
+.input--text {
+    @include input--base;
+}
+
+.input--select {
+    @include input--base;
+}

@@ -1,33 +1,18 @@
   // -----------------------------
- // 			The Grid
-// ---------------------------------
-
-  // -----------------------------
  //             The Grid
 // ---------------------------------
 
 // This is the wrapper class
 .row {
     width: 100%;
-
     display: flex;
+
+    flex-flow: row wrap;
+    align-items: flex-end;
 }
 
-    .row-top {
-        align-items: flex-start;
-    }
-    .row-bottom {
-        align-items: flex-end;
-    }
     .row-center {
-        align-items: center;
         justify-content: center;
-    }
-    .row-stretch {
-        align-items: stretch;
-    }
-    .row-baseline {
-        align-items: baseline;
     }
     .row-between {
         justify-content: space-between;
@@ -42,7 +27,7 @@
 
 
 .col {
-  flex: 1 0 auto;
+  flex: 1;
   display: block;
   width: 100%;
 }
@@ -69,7 +54,8 @@
       flex: 0 0 25%;
       max-width: 25%;
     }
-    .col-33, .col-34 {
+    .col-33,
+    .col-30 {
       flex: 0 0 33.3333%;
       max-width: 33.3333%;
     }
@@ -85,7 +71,7 @@
       flex: 0 0 60%;
       max-width: 60%;
     }
-    .col-66, .col-67 {
+    .col-66 {
       flex: 0 0 66.6666%;
       max-width: 66.6666%;
     }
@@ -100,6 +86,75 @@
     .col-90 {
       flex: 0 0 90%;
       max-width: 90%;
+    }
+
+    // With Gutters
+
+    .row-gutters {
+        justify-content: space-between;
+
+        > .col-10 {
+          flex: 0 0 calc(10% - #{$gutter-width});
+          max-width: calc(10% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-20 {
+          flex: 0 0 calc(20% - #{$gutter-width});
+          max-width: calc(20% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-25 {
+          flex: 0 0 calc(25% - #{$gutter-width});
+          max-width: calc(25% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-33,
+        > .col-30 {
+          flex: 0 0 calc(33.33% - #{$gutter-width});
+          max-width: calc(33.33% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-40 {
+          flex: 0 0 calc(40% - #{$gutter-width});
+          max-width: calc(40% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-50 {
+          flex: 0 0 calc(50% - #{$gutter-width});
+          max-width: calc(50% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-60 {
+          flex: 0 0 calc(60% - #{$gutter-width});
+          max-width: calc(60% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-66 {
+          flex: 0 0 calc(66.66% - #{$gutter-width});
+          max-width: calc(66.66% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-75 {
+          flex: 0 0 calc(75% - #{$gutter-width});
+          max-width: calc(75% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-80 {
+          flex: 0 0 calc(80% - #{$gutter-width});
+          max-width: calc(80% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-90 {
+          flex: 0 0 calc(90% - #{$gutter-width});
+          max-width: calc(90% - #{$gutter-width});
+          margin-bottom: $gutter-width*2;
+        }
+        > .col-100 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: $gutter-width*2;
+        }
+
     }
 
 

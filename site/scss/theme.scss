@@ -1,0 +1,138 @@
+@import 'main';
+
+// Presentation
+
+.p-border {
+    border: 1px dashed $color-gray;
+}
+
+.p-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 4em;
+
+    background-color: $color-gray-lighter;
+}
+
+
+// Color system
+.p-box {
+
+    &.p-color-primary {
+        background-color: $color-primary;
+        color: check-text-color($color-primary);
+    }
+    &.p-color-primary-light {
+        background-color: $color-primary-light;
+        color: check-text-color($color-primary-light);
+    }
+    &.p-color-primary-lighter {
+        background-color: $color-primary-lighter;
+        color: check-text-color($color-primary-lighter);
+    }
+
+    &.p-color-dark {
+        background-color: $color-dark;
+        color: check-text-color($color-primary);
+    }
+    &.p-color-black {
+        background-color: $color-black;
+        color: check-text-color($color-black);
+    }
+    &.p-color-white {
+        background-color: $color-white;
+        color: check-text-color($color-white);
+    }
+    &.p-color-highlight {
+        background-color: $color-highlight;
+        color: check-text-color($color-highlight);
+    }
+
+    &.p-color-gray-dark {
+        background-color: $color-gray-dark;
+        color: check-text-color($color-gray-dark);
+    }
+    &.p-color-gray {
+        background-color: $color-gray;
+        color: check-text-color($color-gray);
+    }
+    &.p-color-gray-light {
+        background-color: $color-gray-light;
+        color: check-text-color($color-gray-light);
+    }
+    &.p-color-gray-lighter {
+        background-color: $color-gray-lighter;
+        color: check-text-color($color-gray-lighter);
+    }
+
+}
+
+.p-code {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+
+    vertical-align: text-bottom;
+
+    font-size: 0.9rem;
+    white-space: nowrap;
+
+    background: $color-gray-lighter;
+    border: 1px solid $color-primary-lighter;
+    border-radius: $radius-sm;
+}
+
+.p-code--block {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+
+    font-size: 0.9rem;
+
+    background-color: $color-gray-lighter;
+    border: 1px solid $color-primary-lighter;
+    border-radius: $radius-sm;
+}
+
+
+.p-menu--toggle {
+    position: relative;
+}
+
+.p-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    
+    width: 100%;
+
+    padding: 0;
+    margin-top: 0.25em;
+    margin-bottom: 0;
+
+    border: 1px solid $color-gray-lighter;
+    background-color: #fff;
+
+    // Hidden state
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+    li {
+        text-align: left;
+        list-style: none;
+        white-space: nowrap;
+
+        padding: 0.25em 1em;
+    }
+}
+
+    .p-menu.-is-visible {
+        visibility: visible;
+        max-height: 200em;
+    }
+

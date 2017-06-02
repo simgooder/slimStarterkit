@@ -1,4 +1,4 @@
-// Alignment ----
+// Positioning ----
 
 .pos--center  {margin-left: auto;margin-right:auto;}
 
@@ -16,4 +16,31 @@
 
 .pos--t {
     margin-bottom: auto;
+}
+
+// Alignment ----
+.align--center {
+    align-items: center;
+    align-self: center;
+}
+
+.align--end {
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+.align--start {
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+
+// Floats ----
+
+.fl--l {
+    float: left;
+}
+
+.fl--r {
+    float: right;
 }
