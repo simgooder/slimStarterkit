@@ -58,41 +58,46 @@
                 LOGO    
             </div>
 
-            <div class="main-header--mobile-menu__open" data-idea-toggle aria-label="Open Navigation Menu">
+            <div class="main-header--mobile-menu__open" data-idea-toggle="nav" aria-label="Open Navigation Menu">
                 MENU
             </div>
 
-            <nav class="main-header--nav" role="navigation" data-idea-target>
+            <nav class="main-header--nav" role="navigation" data-idea-target="nav">
                 
-                <button class="main-header--mobile-menu__close" data-idea-toggle aria-label="Close Navigation Menu">
+                <button class="btn--clear__light main-header--mobile-menu__close pos--center" data-idea-toggle="nav" aria-label="Close Navigation Menu" title="Close Navigation Menu">
                     &times;
                 </button>
 
-                <div class="main-header--nav__item">
-                    <a href="#layout">
+                <a href="#layout">
+                    <div class="main-header--nav__item">
                         Layout
-                    </a>
-                </div>
-                <div class="main-header--nav__item">
-                    <a href="#elements">
+                    </div> 
+                </a>
+
+                <a href="#elements">
+                    <div class="main-header--nav__item">
                         Elements
-                    </a>
-                </div>
-                <div class="main-header--nav__item">
-                    <a href="#typography">
+                    </div>   
+                    
+                </a>
+
+                <a href="#typography">
+                    <div class="main-header--nav__item">
                         Typography
-                    </a>
-                </div>
-                <div class="main-header--nav__item">
-                    <a href="#components">
+                    </div>      
+                </a>
+
+                <a href="#components">
+                    <div class="main-header--nav__item">
                         Components
-                    </a>
-                </div>
-                <div class="main-header--nav__item">
-                    <a href="#colors">
+                    </div>     
+                </a>
+
+                <a href="#colors">
+                    <div class="main-header--nav__item">
                         Colors
-                    </a>
-                </div>
+                    </div>   
+                </a>
 
             </nav>
 
@@ -339,6 +344,9 @@
                         <li>More Items</li>
                         <li>Last Item</li>
                     </menu>
+                </button>
+                <button class="p-menu--toggle" data-idea-toggle="nav">
+                    Toggle Nav
                 </button>
     
 <pre><div class="p-code--block">&lt;button class="p-menu--toggle" data-idea-toggle&gt;

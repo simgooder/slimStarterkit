@@ -51,22 +51,44 @@ input[type="button"],
     }
 }
 
-// This button is filled with color
-.btn--primary {
-    @include btn-base;
+// This button is filled with colour
+.btn--fill {
 
-    color: check-text-color($color-primary);
+    &__primary {
+        @include btn-base;
 
-    background-color: $color-primary;
-    border-color: $color-primary;
+        color: check-text-color($color-primary);
 
-    &:hover,
-    &:focus {
-        background-color: rgba($color-primary, 0.9);
-        color: #fff;
+        background-color: $color-primary;
+        border-color: $color-primary;
+
+        &:hover,
+        &:focus {
+            background-color: rgba($color-primary, 0.9);
+            color: #fff;
+        }
+        &:active {
+
+        }
     }
-    &:active {
 
+}
+
+// This button has a colored border.
+.btn--outline {
+    &__primary {
+        // The Default <button> style, defined above...
+    }
+}
+
+// This button is juuuuust text.
+.btn--clear {
+    &__primary {
+        border-color: transparent;
+    }
+    &__light {
+        border-color: transparent;
+        color: $color-white;
     }
 }
 

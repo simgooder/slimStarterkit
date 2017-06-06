@@ -20,7 +20,7 @@
     - [ ] *Radio*
     - [ ] *Checkbox*
 - [ ] Build/Style *switch* component
-- [ ] Build/Style *menu* component
+- [ ] Build/Style *nav-menu* component
 - [ ] Build/Style *tooltips* component
 - [ ] Include icon set (Material Icons?)
 - [ ] Build/Style *media object* component
