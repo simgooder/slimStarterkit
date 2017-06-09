@@ -29,7 +29,6 @@
 
 ## Changelog
 
-<small>
 __Updates__ - *v0.1.7*
 - A better build process for production files
 - Toggle component can now specify targets
@@ -65,4 +64,3 @@ __Updates__ - *v0.0.4*
 - Removed the pretentious `readme.md`
 - Modified SCSS Reset
 - Updated from Autoprefixer-Core to Autoprefixer PostCSS Module
-</small>
