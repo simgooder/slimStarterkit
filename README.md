@@ -1,4 +1,4 @@
-# Slim Starter Kit v0.1.4
+# Slim Starter Kit v0.1.7
 
 
 ## Directions  
@@ -15,27 +15,23 @@
 
 ## To Do
 - [ ] Build/Style *modal* component
-- [ ] Make the dropdown component smarter (be able to accept targets)
 - [ ] Style *form* elements
     - [ ] *Radio*
     - [ ] *Checkbox*
 - [ ] Build/Style *switch* component
-- [ ] Build/Style *nav-menu* component
 - [ ] Build/Style *tooltips* component
 - [ ] Include icon set (Material Icons?)
-- [ ] Build/Style *media object* component
-- [ ] Build/Style *media list* component
 - [ ] Style responsive media embeds
-- [ ] Implement UNCSS in the build process
 
 -----
 
-## Cool Shit
-
-
------
 
 ## Changelog
+
+__Updates__ - *v0.1.7*
+- A better build process for production files
+- Toggle component can now specify targets
+- Toggleable navigation menu (mobile)
 
 __Updates__ - *v0.1.4*
 - Styled buttons, tables, cards

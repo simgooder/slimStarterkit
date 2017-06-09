@@ -54,24 +54,21 @@ input[type="button"],
 // This button is filled with colour
 .btn--fill {
 
-    &__primary {
-        @include btn-base;
+    @include btn-base;
 
-        color: check-text-color($color-primary);
+    color: check-text-color($color-primary);
 
-        background-color: $color-primary;
-        border-color: $color-primary;
+    background-color: $color-primary;
+    border-color: $color-primary;
 
-        &:hover,
-        &:focus {
-            background-color: rgba($color-primary, 0.9);
-            color: #fff;
-        }
-        &:active {
-
-        }
+    &:hover,
+    &:focus {
+        background-color: rgba($color-primary, 0.9);
+        color: #fff;
     }
+    &:active {
 
+    }
 }
 
 // This button has a colored border.
