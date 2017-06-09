@@ -7,9 +7,10 @@
 2. Navigate to the project folder  
 3. `npm install` installs the dependencies (You only need to do this once)  
 4. `grunt server` starts the server  
-5. In a new tab, `grunt` starts the build process  
+5. In a new tab, `grunt dev` starts the dev build process  
 6. This process will automatically open the site in your default browser  
 7. Write code. Enjoy browser refreshing and live CSS injection.   
+8. Use `grunt build` for production build.
 
 ----
 

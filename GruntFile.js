@@ -125,7 +125,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');                                      
 
 	// Default task(s).
-  	grunt.registerTask('default', ['browserSync','postcss','watch']);
+  	grunt.registerTask('dev', ['browserSync','postcss','watch']);
   	grunt.registerTask('server', ['web_server']);
     grunt.registerTask('build', ['clean', 'uglify', 'copy']);
 
