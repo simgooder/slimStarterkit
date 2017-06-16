@@ -16,6 +16,8 @@
 
 ## To Do
 - [ ] Build/Style *modal* component
+- [ ] Outline + Fill + Clear Button Styles
+- [ ] Large Container
 - [ ] Style *form* elements
     - [ ] *Radio*
     - [ ] *Checkbox*

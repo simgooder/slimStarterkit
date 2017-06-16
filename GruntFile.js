@@ -15,11 +15,7 @@ module.exports = function(grunt) {
 	// Configuration
 	grunt.initConfig({
 
-        // Variables for the path
-        path: {
-            dist: 'dist/',
-            dev: 'site/'
-        },
+        projectConfig: require('./Grunt.config'),
 		
 		// Get Meta Data
 		pkg : grunt.file.readJSON('package.json'),
@@ -32,30 +28,33 @@ module.exports = function(grunt) {
 		    },
 		    foo: 'bar' // Apparently this is necessary
 		},
-		// Watch for changes in .scss files, & autoprefix them css
+		// Watch for changes in .scss files, & autoprefix them
 		watch: {
 			sass: {
-				files:'<%= path.dev %>scss/**/*.scss',
-				tasks:['sass', 'postcss'],
-			},
-			gruntfile: {
-			  	files: ['Gruntfile.js']
-			}
+                files: '<%= projectConfig.dev %>/scss/**/*.scss',
+                tasks: ['sass:dev', 'postcss:dev'],
+            },
+            js: {
+                files: '<%= projectConfig.dev %>/*.js'
+            },
+            html: {
+                files: '<%= projectConfig.dev %>/*.html'
+            }
 		},
         // Clear the dist folder
-        clean: ['<%= path.dist %>*'],
+        clean: ['<%= projectConfig.dist %>'],
         // Minification
         uglify: {
             smush_it_up: {
                 files: {
-                    '<%= path.dist %>slimstarterkit.min.js': ['<%= path.dev %>js/*.js']
+                    '<%= projectConfig.dist %>/slimstarterkit.min.js': ['<%= projectConfig.dev %>/js/*.js']
                 }
             }
         },
         copy: {
             copy_it_over: {
-                src: ['<%= path.dev %>index.html', '<%= path.dev %>css/*'],
-                dest:'<%= path.dist %>',
+                src: ['<%= projectConfig.index %>', '<%= projectConfig.dev %>/css/*'],
+                dest:'<%= projectConfig.dist %>',
                 expand: true,
                 flatten: true,
                 filter: 'isFile'
@@ -67,49 +66,65 @@ module.exports = function(grunt) {
 	            sourceMap: true,
 	            sourceMapEmbed: false,
 	            sourceMapContents: true,
-	            outputStyle: 'compressed',
+	            outputStyle: 'compressed'
 	        },
-	        dist: {
-	            files: {
-	                '<%= path.dev %>css/main.css': '<%= path.dev %>scss/main.scss',
-                    '<%= path.dev %>css/theme.css': '<%= path.dev %>scss/theme.scss'
-	            }
-	        }
+	        dev: {
+                files: {
+                    '<%= projectConfig.temp %>/main.css' : '<%= projectConfig.dev %>/scss/main.scss',
+                    '<%= projectConfig.temp %>/theme.css' : '<%= projectConfig.dev %>/scss/theme.scss'
+                }
+            },
+            dist: {
+                files: {
+                    '<%= projectConfig.temp %>/main.css' : '<%= projectConfig.dev %>/scss/main.scss',
+                    '<%= projectConfig.temp %>/theme.css' : '<%= projectConfig.dev %>/scss/theme.scss'
+                }
+            }
 		},
 		// Browser Sync Config
 		browserSync: {
-		  default_options: {
-		    bsFiles: {
-		      // watch these files for change
-		      src: [
-		        "<%= path.dev %>css/*.css",
-		        "<%= path.dev %>*.html",
-		        "<%= path.dev %>partials/*.html"
-		      ]
-		    },
-		    options: {
-		      watchTask: true,
-		      // The index file to serve
-		      proxy: "http://localhost:7000/<%= path.dev %>index.html",
-		    }
-		  }
-		},
+            dev: {
+                bsFiles: {
+                    // Refresh on these changes...
+                    src: [
+                        '<%= projectConfig.dev %>/**/*.js',
+                        '<%= projectConfig.dev %>/*.html',
+                        '<%= projectConfig.dev %>/css/*.css'
+                    ]
+                },
+                options: {
+                    server: {
+                        baseDir: '<%= projectConfig.dev %>'
+                    },
+                    watchTask: true,
+                    browser: "<%= projectConfig.browser %>"
+                    // The index file to serve
+                    //proxy: "http://localhost:7000/<%= projectConfig.index %>",
+                }
+            }
+        },
 		// Postcss / Autoprefixer config
 		postcss: {
 		    options: {
-		      map: false,
-		      processors: [
-		        require('autoprefixer')({
-		        	browsers: ['> 1%', 'Explorer 10']
-		        })
-		      ]
+                map: false,
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['> 0.5%', 'Explorer 10']
+                    })
+                ]
 		    },
-		    dist: {
-		    	files: {
-		    	  '<%= path.dev %>css/main.css' : '<%= path.dev %>css/main.css',
-                  '<%= path.dev %>css/theme.css' : '<%= path.dev %>css/theme.css'
-		    	}
-		    }
+		    dev: {
+                files: {
+                    '<%= projectConfig.dev %>/css/main.css' : '<%= projectConfig.temp %>/main.css',
+                    '<%= projectConfig.dev %>/css/theme.css' : '<%= projectConfig.temp %>/theme.css'
+                }
+            },
+            dist: {
+                files: {
+                    '<%= projectConfig.dist %>/css/main.css' : '<%= projectConfig.temp %>/main.css',
+                    '<%= projectConfig.dist %>/css/theme.css' : '<%= projectConfig.temp %>/theme.css'
+                }
+            }
 		},
 
 	});
@@ -125,8 +140,23 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');                                      
 
 	// Default task(s).
-  	grunt.registerTask('dev', ['browserSync','postcss','watch']);
-  	grunt.registerTask('server', ['web_server']);
-    grunt.registerTask('build', ['clean', 'uglify', 'copy']);
+  	grunt.registerTask('dev', [
+        'sass:dev',
+        'postcss:dev',
+        'browserSync:dev',
+        'watch'
+    ]);
+
+  	grunt.registerTask('server', [
+          'web_server'
+    ]);
+
+    grunt.registerTask('build', [
+        'clean', 
+        'uglify', 
+        'copy',
+        'sass:dist',
+        'postcss:dist'
+    ]);
 
 };
