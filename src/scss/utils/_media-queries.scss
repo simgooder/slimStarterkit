@@ -56,6 +56,32 @@ $bp-xl: 117.5;  // 1880px
   }
 }
 
+
+// Browser Hacks ----------
+
+// Only supported on IOS devices
+@mixin mq-is-ios {
+    @supports (-webkit-overflow-scrolling: touch) {
+        @content;
+    }
+}
+
+// targets Internet Explorer 8,9,10
+// http://keithclark.co.uk/articles/moving-ie-specific-css-into-media-blocks/
+@mixin mq-ie-only {
+  @media screen\0 {
+     @content;
+  }
+}
+
+@mixin mq-firefox-only {
+    @-moz-document url-prefix() { 
+      @content;
+    }
+}
+
+
+
 @mixin responsive-grid-break($selector, $max-width) {
   @media (max-width: $max-width) {
     #{$selector} {

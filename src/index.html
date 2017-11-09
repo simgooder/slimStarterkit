@@ -241,6 +241,12 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>Large</td>
+                    <td><code class="p-code">1260px ($bp-lg)</code></td>
+                    <td><code class="p-code">.container</code></td>
+                    <td>Standard content width</td>
+                </tr>
+                <tr>
                     <td>Standard</td>
                     <td><code class="p-code">1024px ($bp-md)</code></td>
                     <td><code class="p-code">.container</code></td>
@@ -250,7 +256,7 @@
                     <td>Small</td>
                     <td><code class="p-code">760px ($bp-sm)</code></td>
                     <td><code class="p-code">.container--sm</code></td>
-                    <td>Text content width (for ideal text length)</td>
+                    <td>For ideal text length</td>
                 </tr>
             </tbody>
         </table>
@@ -332,9 +338,25 @@
         <div class="row responsive-sm">
 
             <div class="col card">
-                <h6>Generic Toggle</h6>
+                <h4>
+                    Generic Toggle
+                </h4>
+                <em> Vanilla JavaScript, totally naked toggle component.</em>
+
+                <h6>
+                    Simple dropdown menu example:
+                </h6>
                 <p>
-                    Vanilla JavaScript, totally naked toggle component. Add the <code class="p-code">data-idea-toggle</code> attribute to a container like a button. Inside said button, add the attribute <code class="p-code">data-idea-target</code> to the element you would like to toggle. On click, a class <code class="p-code">-is-visible</code> will be added to the <code class="p-code">data-idea-target</code>.
+                    Add the <code class="p-code">data-idea-toggle</code> attribute to an element - like a button (or anything you want to use as a toggle). Nest your menu inside that element, and add the attribute <code class="p-code">data-idea-target</code> to your the menu you want to show when the toggle is clicked. <br>
+                    When the <code class="p-code">data-idea-toggle</code> is clicked, a class will be added to the nested element with a <code class="p-code">data-idea-target</code> attribute. 
+                </p>
+
+                <h6>
+                    Simple modal or navigation example:
+                </h6>
+                <p>  
+                    Add the <code class="p-code">data-idea-toggle</code> attribute to any trigger you like. If you want, you can even specify a toggle, like <code class="p-code">data-idea-toggle="mytarget"</code>, then, set the same value to your target attribute like so: <code class="p-code">data-idea-target="mytarget"</code>. <br>
+                    When a <code class="p-code">data-idea-toggle</code> is <em>clicked</em>, a class <code class="p-code">-is-visible</code> will be added to any corresponding <code class="p-code">data-idea-target</code> attributes with the same value specified. 
                 </p>
                 <button class="p-menu--toggle" data-idea-toggle>
                     Dropdown ▾
