@@ -1,38 +1,38 @@
 // Positioning ----
 
-.pos--center  {
+.pos-center  {
     margin-left: auto;
     margin-right: auto;
 }
 
-.pos--l {
+.pos-l {
     margin-right: auto;
 }
 
-.pos--r {
+.pos-r {
     margin-left: auto;
 }
 
-.pos--b {
+.pos-b {
     margin-top: auto;
 }
 
-.pos--t {
+.pos-t {
     margin-bottom: auto;
 }
 
 // Alignment ----
-.align--center {
+.align-center {
     align-items: center;
     align-self: center;
 }
 
-.align--end {
+.align-end {
     align-items: flex-end;
     align-self: flex-end;
 }
 
-.align--start {
+.align-start {
     align-items: flex-start;
     align-self: flex-start;
 }
@@ -40,10 +40,10 @@
 
 // Floats ----
 
-.fl--l {
+.fl-l {
     float: left;
 }
 
-.fl--r {
+.fl-r {
     float: right;
 }

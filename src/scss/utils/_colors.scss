@@ -2,18 +2,18 @@
 //    and through SASS functions, we could create an appropriate palette for the
 //    - http://sass-lang.com/documentation/Sass/Script/Functions.html
 
-$color-primary:         #0962EA;
-$color-primary-light:   lighten($color-primary, 15%);
-$color-primary-lighter: lighten($color-primary, 45%);
+$color-primary:     #0962EA;
+
+$color-primary-300: lighten($color-primary, 15%);
+$color-primary-100: lighten($color-primary, 45%);
 
 $color-highlight:   #FAF15D;
 
-$color-white:       #fff;
+$color-light:       #fff;
 $color-black:       #111;
 $color-dark:        darken($color-primary, 32%);
 
-$color-gray-dark:    mix( desaturate($color-primary, 65%), $color-black, 35% );
-$color-gray:         lighten($color-gray-dark, 25%);
-$color-gray-light:   lighten($color-gray, 25%);
-$color-gray-lighter: lighten($color-gray-light, 22%);
-
+$color-gray-500: mix( desaturate($color-primary, 65%), $color-black, 35% );
+$color-gray-400: lighten($color-gray-500, 25%);
+$color-gray-300: lighten($color-gray-400, 25%);
+$color-gray-200: lighten($color-gray-300, 22%);

@@ -2,8 +2,16 @@
 $bp-xs: 32.5em;  // 520px
 $bp-sm: 47.5em; // 760px
 $bp-md: 64em;   // 1024px
-$bp-lg: 78.75;  // 1260px
-$bp-xl: 117.5;  // 1880px
+$bp-lg: 78.75em;  // 1260px
+$bp-xl: 117.5em;  // 1880px
+
+
+// Very Small View -- from 0px to $bp-xs
+@mixin mq-sm {
+  @media screen and (max-width: #{$bp-xs}) {
+    @content;
+  }
+}
 
 // General Mobile View -- from 0px to $bp-sm
 @mixin mq-sm {
@@ -29,7 +37,7 @@ $bp-xl: 117.5;  // 1880px
 
 // General Desktop View
 @mixin mq-xl {
-  @media screen and (min-width: #{$bp-xl}) {
+  @media screen and (min-width: #{$bp-lg}) {
     @content;
   }
 }
@@ -87,7 +95,7 @@ $bp-xl: 117.5;  // 1880px
     #{$selector} {
       flex-direction: column;
 
-      .col, .col-10, .col-20, .col-25, .col-33, .col-34, .col-50, .col-66, .col-67, .col-75, .col-80, .col-90 {
+      .col, .col-10, .col-20, .col-25, .col-30, .col-33, .col-50, .col-66, .col-67, .col-75, .col-80, .col-90 {
         flex: 1;
         margin-bottom: ($space * 3) / 2;
         margin-left: 0;

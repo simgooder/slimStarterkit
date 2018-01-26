@@ -14,7 +14,7 @@
 
     white-space: nowrap;
     text-decoration: none;
-    line-height: 2;
+    line-height: #{$button-height - 0.1};
     font-weight: 600;
     font-size: $font-size-meta;
     letter-spacing: 0.015em;
@@ -29,30 +29,8 @@
     }
 }
 
-// Buttons are pretty by default
-button,
-input[type="submit"],
-input[type="button"],
-.btn {
-    @include btn-base;
-
-    color: $color-primary;
-
-    border-color: $color-primary;
-
-    transition: color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
-
-    &:hover,
-    &:focus {
-        border-color: $color-primary-light;
-    }
-    &:active {
-
-    }
-}
-
 // This button is filled with colour
-.btn--fill {
+.btn-primary {
 
     @include btn-base;
 
@@ -72,21 +50,49 @@ input[type="button"],
 }
 
 // This button has a colored border.
-.btn--outline {
-    &__primary {
-        // The Default <button> style, defined above...
+.btn-secondary {
+    @include btn-base;
+
+    color: $color-primary;
+
+    border-color: $color-primary;
+
+    transition: color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        border-color: $color-primary-300;
+    }
+    &:active {
+
     }
 }
 
 // This button is juuuuust text.
-.btn--clear {
-    &__primary {
-        border-color: transparent;
+.btn-tertiary {
+    @include btn-base;
+
+    color: $color-primary;
+
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+        color: $color-primary-300;
     }
-    &__light {
-        border-color: transparent;
-        color: $color-white;
+    &:active {
+
     }
 }
 
 
+// Button Utilities
+// -- Add these to any button class for an altered appearance
+.btn-u-lg {
+    font-size: 1.25em;
+}
+
+.btn-u-block {
+    display: block;
+    width: 100%;
+}

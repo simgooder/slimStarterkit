@@ -27,65 +27,69 @@
 
 
 .col {
-  flex: 1;
-  display: block;
-  width: 100%;
+    flex: 1;
+    display: block;
+    width: 100%;
 }
 
     .col-top {
-      align-self: flex-start;
+        align-self: flex-start;
     }
     .col-bottom {
-      align-self: flex-end;
+        align-self: flex-end;
     }
     .col-center {
-      align-self: center;
+        align-self: center;
     }
 
     .col-10 {
-      flex: 0 0 10%;
-      max-width: 10%;
+        flex: 0 0 10%;
+        max-width: 10%;
     }
     .col-20 {
-      flex: 0 0 20%;
-      max-width: 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
     }
     .col-25 {
-      flex: 0 0 25%;
-      max-width: 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
     }
     .col-33,
     .col-30 {
-      flex: 0 0 33.3333%;
-      max-width: 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
     }
     .col-40 {
-      flex: 0 0 40%;
-      max-width: 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
     }
     .col-50 {
-      flex: 0 0 50%;
-      max-width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     .col-60 {
-      flex: 0 0 60%;
-      max-width: 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
     }
     .col-66 {
-      flex: 0 0 66.6666%;
-      max-width: 66.6666%;
+        flex: 0 0 66.6666%;
+        max-width: 66.6666%;
+    }
+    .col-70 {
+        flex: 0 0 70%;
+        max-width: 70%;
     }
     .col-75 {
-      flex: 0 0 75%;
-      max-width: 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
     }
     .col-80 {
-      flex: 0 0 80%;
-      max-width: 80%;
+        flex: 0 0 80%;
+        max-width: 80%;
     }
     .col-90 {
-      flex: 0 0 90%;
-      max-width: 90%;
+        flex: 0 0 90%;
+        max-width: 90%;
     }
 
     // With Gutters
@@ -94,64 +98,64 @@
         justify-content: space-between;
 
         > .col-10 {
-          flex: 0 0 calc(10% - #{$gutter-width});
-          max-width: calc(10% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(10% - #{$gutter-width});
+            max-width: calc(10% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-20 {
-          flex: 0 0 calc(20% - #{$gutter-width});
-          max-width: calc(20% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(20% - #{$gutter-width});
+            max-width: calc(20% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-25 {
-          flex: 0 0 calc(25% - #{$gutter-width});
-          max-width: calc(25% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(25% - #{$gutter-width});
+            max-width: calc(25% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-33,
         > .col-30 {
-          flex: 0 0 calc(33.33% - #{$gutter-width});
-          max-width: calc(33.33% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(33.33% - #{$gutter-width});
+            max-width: calc(33.33% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-40 {
-          flex: 0 0 calc(40% - #{$gutter-width});
-          max-width: calc(40% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(40% - #{$gutter-width});
+            max-width: calc(40% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-50 {
-          flex: 0 0 calc(50% - #{$gutter-width});
-          max-width: calc(50% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(50% - #{$gutter-width});
+            max-width: calc(50% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-60 {
-          flex: 0 0 calc(60% - #{$gutter-width});
-          max-width: calc(60% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(60% - #{$gutter-width});
+            max-width: calc(60% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-66 {
-          flex: 0 0 calc(66.66% - #{$gutter-width});
-          max-width: calc(66.66% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(66.66% - #{$gutter-width});
+            max-width: calc(66.66% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
+        }
+        > .col-70 {
+            flex: 0 0 calc(70% - #{$gutter-width});
+            max-width: calc(70% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-75 {
-          flex: 0 0 calc(75% - #{$gutter-width});
-          max-width: calc(75% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(75% - #{$gutter-width});
+            max-width: calc(75% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-80 {
-          flex: 0 0 calc(80% - #{$gutter-width});
-          max-width: calc(80% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
+            flex: 0 0 calc(80% - #{$gutter-width});
+            max-width: calc(80% - #{$gutter-width});
+            margin-bottom: $gutter-width*2;
         }
         > .col-90 {
-          flex: 0 0 calc(90% - #{$gutter-width});
-          max-width: calc(90% - #{$gutter-width});
-          margin-bottom: $gutter-width*2;
-        }
-        > .col-100 {
-            flex: 0 0 100%;
-            max-width: 100%;
+            flex: 0 0 calc(90% - #{$gutter-width});
+            max-width: calc(90% - #{$gutter-width});
             margin-bottom: $gutter-width*2;
         }
 

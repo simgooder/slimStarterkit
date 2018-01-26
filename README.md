@@ -14,22 +14,17 @@
 
 ----
 
-## To Do
-- [ ] Build/Style *modal* component
-- [ ] Outline + Fill + Clear Button Styles
-- [ ] Large Container
-- [ ] Style *form* elements
-    - [ ] *Radio*
-    - [ ] *Checkbox*
-- [ ] Build/Style *switch* component
-- [ ] Build/Style *tooltips* component
-- [ ] Include icon set (Material Icons?)
-- [ ] Style responsive media embeds
-
------
-
 
 ## Changelog
+
+__Updates__ - *v0.2.0*
+- Moved to Gulp for faster build process
+- Added image compression to build process
+- Added SVG sprite builder to build process
+- More complete `container` classes
+- More complete set of `media-queries` and breakpoints
+- Cleaner class naming conventions
+- Button utlity classes
 
 __Updates__ - *v0.1.7*
 - A better build process for production files

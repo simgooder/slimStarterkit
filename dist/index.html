@@ -5,7 +5,7 @@
 <head>
 
 	<title>
-        Pagesimple Theme Boilerplate
+        Website Boilerplate
     </title>
 
 	<!-- The Meta Fun -->
@@ -42,8 +42,6 @@
     <meta name="twitter:card" content="">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
 </head>
@@ -52,50 +50,49 @@
 
     <header class="main-header">
 
-        <div class="main-header--container">
+        <div class="main-header-container">
             
-            <div class="main-header--logo">
+            <div class="main-header-logo">
                 LOGO    
             </div>
 
-            <div class="main-header--mobile-menu__open" data-idea-toggle="nav" aria-label="Open Navigation Menu">
+            <div class="" data-idea-toggle="nav" aria-label="Open Navigation Menu">
                 MENU
             </div>
 
-
-            <nav class="main-header--nav" role="navigation" data-idea-target="nav">
+            <nav class="main-header-nav" role="navigation" data-idea-target="nav">
                 
-                <button class="btn--clear__light main-header--mobile-menu__close pos--center" data-idea-toggle="nav" aria-label="Close Navigation Menu" title="Close Navigation Menu">
+                <button class=" pos-center" data-idea-toggle="nav" aria-label="Close Navigation Menu" title="Close Navigation Menu">
                     &times;
                 </button>
 
                 <a href="#layout">
-                    <div class="main-header--nav__item">
+                    <div class="main-header-nav__item">
                         Layout
                     </div> 
                 </a>
 
                 <a href="#elements">
-                    <div class="main-header--nav__item">
+                    <div class="main-header-nav__item">
                         Elements
                     </div>   
                     
                 </a>
 
                 <a href="#typography">
-                    <div class="main-header--nav__item">
+                    <div class="main-header-nav__item">
                         Typography
                     </div>      
                 </a>
 
                 <a href="#components">
-                    <div class="main-header--nav__item">
+                    <div class="main-header-nav__item">
                         Components
                     </div>     
                 </a>
 
                 <a href="#colors">
-                    <div class="main-header--nav__item">
+                    <div class="main-header-nav__item">
                         Colors
                     </div>   
                 </a>
@@ -106,7 +103,7 @@
 
     </header>
 
-    <section class="container" id="layout">
+    <section class="container section" id="layout">
         
         <header>
             <h2>Layout</h2>    
@@ -117,46 +114,19 @@
         </h3>
 
         <p>
-        Build dynamic columns using the <code class="p-code">.col</code> class, or definitive widths by suffixing <code>col</code> with your width, like <code class="p-code">.col-30</code>. Wrap your columns in a <code class="p-code">.row</code> class, with optional gutters. <br>
-        There are even classes like <code class="p-code">.responsive-sm</code>, to break the grid at specific breakpoints. <br>
-        Resize your browser window to see it in action.
+            Build dynamic columns using the <code>.col</code> class, or definitive widths by suffixing <code>col</code> with your width, like <code>.col-30</code>. 
         </p>
-
-        <div class="row mar--b row-gutters responsive-sm">
-            <div class="col">
-                <div class="p-box p-border">
-                    <code>.col</code>
-                </div>
-            </div>  
-            <div class="col">
-                <div class="p-box p-border">
-                    <code>.col</code>
-                </div>
-            </div>  
-        </div>
-   
-        <div class="row row-gutters responsive-sm">
-            <div class="col-50">
-                <div class="p-box p-border">
-                    <code>.col-50</code>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="p-box p-border">
-                    <code>.col-25</code>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="p-box p-border">
-                    <code>.col-25</code>
-                </div>
-            </div>
-        </div>
+        <p> 
+            Wrap your columns in a <code>.row</code> class, with optional gutters (<code>.row-gutters</code>). 
+        </p>
+        <p>
+            There are even classes like <code>.responsive-sm</code>, to break the grid at specific breakpoints. 
+        </p>
 
         <h3>
             Positioning
         </h3>
-        <p>Based on a simple <code class="p-code">$space</code> variable, and a set of helper classes, positioning your elements with padding or extra margin is as easy as adding a class. In this case, <code class="p-code">$space</code> is equal to <code class="p-code">1em</code>.</p>
+        <p>Based on a simple <code>$space</code> variable, and a set of helper classes, positioning your elements with padding or extra margin is as easy as adding a class. In this case, <code>$space</code> is equal to <code>1em</code>.</p>
 
         <table>
             <thead>
@@ -170,56 +140,56 @@
                 <tr>
                     <td>All</td>
                     <td>
-                        <code class="p-code">.pad</code> / 
-                        <code class="p-code">.mar</code>
+                        <code>.pad</code> / 
+                        <code>.mar</code>
                     </td>
                     <td>Space all the things.</td>
                 </tr>
                 <tr>
                     <td>Horizontal</td>
                     <td>
-                        <code class="p-code">.pad--h</code> / 
-                        <code class="p-code">.mar--h</code>
+                        <code>.pad-h</code> / 
+                        <code>.mar-h</code>
                     </td>
                     <td>Space the left and right.</td>
                 </tr>
                 <tr>
                     <td>Vertical</td>
                     <td>
-                        <code class="p-code">.pad--v</code> / 
-                        <code class="p-code">.mar--v</code>
+                        <code>.pad-v</code> / 
+                        <code>.mar-v</code>
                     </td>
                     <td>Space the top and bottom.</td>
                 </tr>
                 <tr>
                     <td>Top</td>
                     <td>
-                        <code class="p-code">.pad--t</code> / 
-                        <code class="p-code">.mar--t</code>
+                        <code>.pad-t</code> / 
+                        <code>.mar-t</code>
                     </td>
                     <td>Space the top.</td>
                 </tr>
                 <tr>
                     <td>Bottom</td>
                     <td>
-                        <code class="p-code">.pad--b</code> / 
-                        <code class="p-code">.mar--b</code>
+                        <code>.pad-b</code> / 
+                        <code>.mar-b</code>
                     </td>
                     <td>Space the bottom.</td>
                 </tr>
                 <tr>
                     <td>Left</td>
                     <td>
-                        <code class="p-code">.pad--l</code> / 
-                        <code class="p-code">.mar--l</code>
+                        <code>.pad-l</code> / 
+                        <code>.mar-l</code>
                     </td>
                     <td>Space the left.</td>
                 </tr>
                 <tr>
                     <td>Left</td>
                     <td>
-                        <code class="p-code">.pad--l</code> / 
-                        <code class="p-code">.mar--l</code>
+                        <code>.pad-l</code> / 
+                        <code>.mar-l</code>
                     </td>
                     <td>Space the right.</td>
                 </tr>
@@ -237,27 +207,37 @@
                     <th>Container</th>
                     <th>Max-width</th>
                     <th>Class</th>
-                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Large</td>
-                    <td><code class="p-code">1260px ($bp-lg)</code></td>
-                    <td><code class="p-code">.container</code></td>
-                    <td>Standard content width</td>
+                    <td>Extra Large</td>
+                    <td>
+                        <code>1880px ($bp-xl)</code>
+                    </td>
+                    <td>
+                        <code>.container-xl</code>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Standard</td>
-                    <td><code class="p-code">1024px ($bp-md)</code></td>
-                    <td><code class="p-code">.container</code></td>
-                    <td>Standard content width</td>
+                    <td>Large</td>
+                    <td><code>1260px ($bp-lg)</code></td>
+                    <td><code>.container-lg</code></td>
+                </tr>
+                <tr>
+                    <td>Medium</td>
+                    <td><code>1024px ($bp-md)</code></td>
+                    <td><code>.container</code></td>
                 </tr>
                 <tr>
                     <td>Small</td>
-                    <td><code class="p-code">760px ($bp-sm)</code></td>
-                    <td><code class="p-code">.container--sm</code></td>
-                    <td>For ideal text length</td>
+                    <td><code>760px ($bp-sm)</code></td>
+                    <td><code>.container-sm</code></td>
+                </tr>
+                <tr>
+                    <td>Extra Small</td>
+                    <td><code>520px ($bp-xs)</code></td>
+                    <td><code>.container-xs</code></td>
                 </tr>
             </tbody>
         </table>
@@ -274,16 +254,37 @@
             Buttons
         </h3>
         <p>
-            By default, <code class="p-code">&lt;button&gt;</code>, <code class="p-code">input[type="submit"]</code>, <code class="p-code">input[type="button"]</code>, and <code class="p-code">.btn</code> are styled as the standard button below.
+            Simple button styles, with a couple useful utility classes make these buttons suitable for [most of] your needs.
         </p>
 
-        <div class="row pad--b__lg">
-            <button type="button">
-                Standard Button
+        <div class="row pad-b_lg">
+            <button class="btn-primary" type="button">
+                Primary Button
             </button>
 
-            <button class="btn--fill mar--l" type="button">
-                Primary Button
+            <button class="btn-secondary mar-l" type="button">
+                Secondary Button
+            </button>
+
+            <button class="btn-tertiary mar-l" type="button">
+                Tertiary Button
+            </button>
+        </div>
+
+        <div class="row pad-b_lg">
+            <div>
+                <p>Simply add the class <code>.btn-u-lg</code> to your existing button class for a nice big call-to-action.</p>
+                <button class="btn-primary btn-u-lg">
+                    Large Button
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                For a button that will span the width of its container, add the class <code>.btn-u-block</code>.
+            </p>
+            <button class="btn-primary btn-u-block">
+                Block Button
             </button>
         </div>
 
@@ -293,17 +294,17 @@
 
         <div class="row responsive-sm">
             <div class="col-50">
-                <div class="input--group">
-                    <label class="input--label">
+                <div class="input-group">
+                    <label class="input-label">
                         Text Input
                     </label>
-                    <input class="input--text" type="text" placeholder="Placeholder text" id="input--text">
+                    <input class="input-text" type="text" placeholder="Placeholder text" id="input-text">
                 </div>
-                <div class="input--group">
-                    <label class="input--label">
+                <div class="input-group">
+                    <label class="input-label">
                         Select Field
                     </label>
-                    <select class="input--select" name="idea_select" id="idea_select">
+                    <select class="input-select" name="idea_select" id="idea_select">
                         <option value="One">Option One</option>
                         <option value="Two">Option Two</option>
                         <option value="Three">Option Three</option>
@@ -316,17 +317,8 @@
 
     <section class="container section" id="typography">
         
-        <header>
-            <h2>Typography</h2>    
-        </header>
 
-        <p>Paragraph Text</p>
-        <h6>Heading 6</h6>
-        <h5>Heading 5</h5>
-        <h4>Heading 4</h4>
-        <h3>Heading 3</h3>
-        <h2>Heading 2</h2>
-        <h1>Heading 1</h1>
+
 
     </section>
 

@@ -53,8 +53,8 @@ gulp.task('sass', function() {
         .pipe(gulpif(production, postcss([
             require('autoprefixer')({
                 browsers: [
-                    '> 0.5%',
-                    'last 2 versions'
+                    '> 0.25%',
+                    'ie > 10'
                 ],
                 cascade: false
             })

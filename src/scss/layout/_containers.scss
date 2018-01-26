@@ -1,4 +1,19 @@
-.container--lg {
+.section {
+    margin-bottom: 6rem;
+}
+
+.container-lg {
+    width: 100%;
+    max-width: $bp-xl;
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-lg {
     width: 100%;
     max-width: $bp-lg;
 
@@ -20,9 +35,20 @@
     margin-right: auto;
 }
 
-.container--sm {
+.container-sm {
     width: 100%;
     max-width: $bp-sm;
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-xs {
+    width: 100%;
+    max-width: $bp-xs;
 
     padding-left: 1em;
     padding-right: 1em;

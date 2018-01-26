@@ -1,5 +1,5 @@
 // Site-Specific Javascript!
 
-window.document.on('ready', function() {
-    alert("DO SOME SHIT")
-});
+document.addEventListener('DOMContentLoaded', function () { 
+    // alert("DO SOME SHIT")
+}, false);

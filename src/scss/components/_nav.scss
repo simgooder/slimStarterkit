@@ -4,7 +4,7 @@
     background-color: #efefef;
 }
 
-    .main-header--container {
+    .main-header-container {
         width: 100%;
         max-width: $bp-lg;
         margin-left: auto;
@@ -27,30 +27,13 @@
         }
     }
 
-        // Mobile Menu ----
-        .main-header--mobile-menu__open {
-            margin-left: auto;
-            cursor: pointer;
-        }
-        .main-header--mobile-menu__close {
-            display: block;
-            height: 1.5em;
-            width: 2em;
-
-            font-size: 2.5em;
-            line-height: 1;
-
-            padding-left: 0.2em;
-            padding-right: 0.3em;
-            padding-bottom: 0.2em;
-        }
 
 
-        .main-header--logo {
+        .main-header-logo {
            
         }
 
-        .main-header--nav {
+        .main-header-nav {
             position: fixed;
             top: 0;
             z-index: z("overlay");
@@ -64,9 +47,9 @@
 
             overflow: hidden;
 
-            background-color: $color-primary-light;
+            background-color: $color-primary-300;
 
-            color: check-text-color($color-primary-light);
+            color: check-text-color($color-primary-300);
 
             // The link wrapper
             > a {
@@ -74,7 +57,7 @@
                 text-align: center;
             }
 
-            // Hidden state --
+            // Hidden state -
             transition: 0.25s;
             border-radius: 50%;
             opacity: 0;
@@ -96,14 +79,14 @@
             }
         }
 
-            .main-header--nav__item {
+            .main-header-nav__item {
                 position: relative;
                 display: inline-block;
 
                 padding-top: 0.65em;
                 padding-bottom: 0.65em;
 
-                color: $color-white;    
+                color: $color-light;    
                 text-align: center;                
                 font-size: 2em;
 

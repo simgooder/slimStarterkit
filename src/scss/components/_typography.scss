@@ -17,7 +17,7 @@ html,
 
 body {
     font-family: $font-stack;
-    color: $color-gray-dark;
+    color: $color-gray-500;
     line-height: 1.5;
 
     -webkit-font-smoothing: antialiased;
@@ -63,6 +63,10 @@ p {
     font-size: 1.1rem; line-height: 1.5;
 }
 
+code {
+    background-color: #efefef;
+}
+
 // Typographic Styles
 
 // Text Alignment
@@ -70,15 +74,6 @@ p {
 .text-left    {text-align: left;}
 .text-right   {text-align: right;}
 
-
-// Text Colours
-.text-color {
-
-	&.-dark {
-		color: $color-gray-dark;
-	}
-
-}
 
 // Links
 a,

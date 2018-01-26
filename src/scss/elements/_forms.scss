@@ -9,13 +9,13 @@
     }
 }
 
-.input--group {
+.input-group {
     @include input-group;
 }
 
 
 // Labels ----------
-.input--label {
+.input-label {
     display: inline-block;
 
     margin-bottom: 0.65em;
