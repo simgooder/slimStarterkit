@@ -3,17 +3,19 @@
 //    - http://sass-lang.com/documentation/Sass/Script/Functions.html
 
 $color-primary:     #0962EA;
-
+$color-primary-500: darken($color-primary, 25%);
 $color-primary-300: lighten($color-primary, 15%);
 $color-primary-100: lighten($color-primary, 45%);
 
 $color-highlight:   #FAF15D;
+$color-success: mediumspringgreen;
+$color-danger: red;
 
 $color-light:       #fff;
 $color-black:       #111;
-$color-dark:        darken($color-primary, 32%);
+$color-dark:        mix( desaturate($color-primary, 65%), $color-black, 35% );
 
-$color-gray-500: mix( desaturate($color-primary, 65%), $color-black, 35% );
+$color-gray-500: $color-dark;
 $color-gray-400: lighten($color-gray-500, 25%);
 $color-gray-300: lighten($color-gray-400, 25%);
 $color-gray-200: lighten($color-gray-300, 22%);

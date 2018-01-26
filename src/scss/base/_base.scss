@@ -23,10 +23,10 @@ body {
     box-sizing: border-box;
 }
 
-.img {
-  max-width:100%;
-}
-
 input, button {
     outline: 0;
+}
+
+select {
+    appearance: none;
 }

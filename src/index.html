@@ -56,8 +56,8 @@
                 LOGO    
             </div>
 
-            <div class="" data-idea-toggle="nav" aria-label="Open Navigation Menu">
-                MENU
+            <div class="btn-fab-fixed" data-idea-toggle="nav" aria-label="Open Navigation Menu">
+                <div>MENU</div>
             </div>
 
             <nav class="main-header-nav" role="navigation" data-idea-target="nav">
@@ -66,32 +66,20 @@
                     &times;
                 </button>
 
-                <a href="#layout">
+                <a href="#layout" data-idea-toggle="nav">
                     <div class="main-header-nav__item">
                         Layout
                     </div> 
                 </a>
 
-                <a href="#elements">
+                <a href="#elements" data-idea-toggle="nav">
                     <div class="main-header-nav__item">
                         Elements
                     </div>   
                     
                 </a>
 
-                <a href="#typography">
-                    <div class="main-header-nav__item">
-                        Typography
-                    </div>      
-                </a>
-
-                <a href="#components">
-                    <div class="main-header-nav__item">
-                        Components
-                    </div>     
-                </a>
-
-                <a href="#colors">
+                <a href="#colors" data-idea-toggle="nav">
                     <div class="main-header-nav__item">
                         Colors
                     </div>   
@@ -300,7 +288,7 @@
                     </label>
                     <input class="input-text" type="text" placeholder="Placeholder text" id="input-text">
                 </div>
-                <div class="input-group">
+                <div class="input-group -has-select">
                     <label class="input-label">
                         Select Field
                     </label>
@@ -315,10 +303,168 @@
 
     </section>
 
-    <section class="container section" id="typography">
+    <section class="container section" id="colors">
         
+        <header>
+            <h2>Color System</h2>
+        </header>
 
-
+        <table>
+            <thead>
+                <tr>
+                    <th>Color Type</th>
+                    <th>SCSS Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Primary
+                    </td>
+                    <td>
+                        <code>$color-primary</code>
+                    </td>
+                    <td>
+                        Used for actionable items
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Primary 300
+                    </td>
+                    <td>
+                        <code>$color-primary-300</code>
+                    </td>
+                    <td>
+                        Slightly lighter shade of <code>primary</code>. Used for alternate states (hover, etc).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Primary 100
+                    </td>
+                    <td>
+                        <code>$color-primary-100</code>
+                    </td>
+                    <td>
+                        Lightest shade of <code>primary</code>. Used for shading and mixing.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Highlight
+                    </td>
+                    <td>
+                        <code>$color-highlight</code>
+                    </td>
+                    <td>
+                        Used to highlight important things.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Light
+                    </td>
+                    <td>
+                        <code>$color-light</code>
+                    </td>
+                    <td>
+                        Your favourite shade of <code>white</code>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Black
+                    </td>
+                    <td>
+                        <code>$color-black</code>
+                    </td>
+                    <td>
+                        Your favourite shade of black.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dark
+                    </td>
+                    <td>
+                        <code>$color-dark</code>
+                    </td>
+                    <td>
+                        Your favourite shade of <code>black</code> with a hint of <code>primary</code>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Success
+                    </td>
+                    <td>
+                        <code>$color-success</code>
+                    </td>
+                    <td>
+                        Successful things.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Danger
+                    </td>
+                    <td>
+                        <code>$color-danger</code>
+                    </td>
+                    <td>
+                        Your favourite shade of error.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gray 500
+                    </td>
+                    <td>
+                        <code>$color-gray-500</code>
+                    </td>
+                    <td>
+                        Also known as <code>$color-dark</code>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gray 400
+                    </td>
+                    <td>
+                        <code>$color-gray-400</code>
+                    </td>
+                    <td>
+                        Lighter shade of <code>$color-gray-500</code>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gray 300
+                    </td>
+                    <td>
+                        <code>$color-gray-300</code>
+                    </td>
+                    <td>
+                        Lighter shade of
+                        <code>$color-gray-400</code>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gray 200
+                    </td>
+                    <td>
+                        <code>$color-gray-200</code>
+                    </td>
+                    <td>
+                        Lighter shade of
+                        <code>$color-gray-300</code>.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
     </section>
 

@@ -34,3 +34,12 @@
 .input-select {
     @include input-base;
 }
+
+    .input-group.-has-select::after {
+        content: '';
+        @include arrow-down(0.35em, $color-primary);
+
+        position: absolute;
+        bottom: 0.85rem;
+        right: 1rem;
+    }
