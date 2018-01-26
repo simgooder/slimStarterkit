@@ -1,6 +1,11 @@
+
 table {
     width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    
     border-collapse: collapse;
+    border-spacing: 0;
 }
 
 thead {
@@ -8,9 +13,11 @@ thead {
 }
 
 th, td {
-    border-bottom: 1px solid $color-ui-fill;
+    border-bottom: 1px solid $color-gray-light;
 
     padding: 0.85em 1em;
+
+    text-align: left;
 
     &:first-child {
         padding-left: 0;

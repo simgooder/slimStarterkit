@@ -25,15 +25,15 @@
 @import 'elements/buttons',
         'elements/forms',
         'elements/inputs',
-        'elements/images'
+        'elements/images',
+        'elements/table'
 ;
 
 //     Components
 //----------------------
 @import 'components/nav',
         'components/typography',
-        'components/card',
-        'components/tables'
+        'components/card'
 ;  
 
 //     Layout  
@@ -43,7 +43,3 @@
         'layout/spacing',
         'layout/containers'
 ;  
-
-//      Theme
-//-----------------------
-@import 'theme/theme';

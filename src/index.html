@@ -4,7 +4,9 @@
 
 <head>
 
-	<title>Slim Starter SCSS</title>
+	<title>
+        Pagesimple Theme Boilerplate
+    </title>
 
 	<!-- The Meta Fun -->
 	<meta charset="UTF-8">
@@ -17,15 +19,13 @@
     <meta name="theme-color" content="#efefef">
 	
 	<!-- Scripts -->
-	<script async src="js/slimstarterkit-ui.js"></script>
-	
-	<!-- Third Party Assets -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<script async src="js/site.min.js"></script>
 	
 	<!-- Stylesheets -->
-	<!-- <link rel="stylesheet" href="css/main.css"> -->
-    <!-- Theme : Specific to this demo, imports the main.css file -->
-    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Third Party Assets -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 
     <!-- Meta Tags -->
     <meta name="description" content="">
@@ -61,6 +61,7 @@
             <div class="main-header--mobile-menu__open" data-idea-toggle="nav" aria-label="Open Navigation Menu">
                 MENU
             </div>
+
 
             <nav class="main-header--nav" role="navigation" data-idea-target="nav">
                 
@@ -329,138 +330,6 @@
 
     </section>
 
-    <section class="container section" id="components">
-        
-        <header>
-            <h2>Components</h2>    
-        </header>
-
-        <div class="row responsive-sm">
-
-            <div class="col card">
-                <h4>
-                    Generic Toggle
-                </h4>
-                <em> Vanilla JavaScript, totally naked toggle component.</em>
-
-                <h6>
-                    Simple dropdown menu example:
-                </h6>
-                <p>
-                    Add the <code class="p-code">data-idea-toggle</code> attribute to an element - like a button (or anything you want to use as a toggle). Nest your menu inside that element, and add the attribute <code class="p-code">data-idea-target</code> to your the menu you want to show when the toggle is clicked. <br>
-                    When the <code class="p-code">data-idea-toggle</code> is clicked, a class will be added to the nested element with a <code class="p-code">data-idea-target</code> attribute. 
-                </p>
-
-                <h6>
-                    Simple modal or navigation example:
-                </h6>
-                <p>  
-                    Add the <code class="p-code">data-idea-toggle</code> attribute to any trigger you like. If you want, you can even specify a toggle, like <code class="p-code">data-idea-toggle="mytarget"</code>, then, set the same value to your target attribute like so: <code class="p-code">data-idea-target="mytarget"</code>. <br>
-                    When a <code class="p-code">data-idea-toggle</code> is <em>clicked</em>, a class <code class="p-code">-is-visible</code> will be added to any corresponding <code class="p-code">data-idea-target</code> attributes with the same value specified. 
-                </p>
-                <button class="p-menu--toggle" data-idea-toggle>
-                    Dropdown ▾
-                    <menu class="p-menu" data-idea-target>
-                        <li>Menu Item</li>
-                        <li>Another One</li>
-                        <li>More Items</li>
-                        <li>Last Item</li>
-                    </menu>
-                </button>
-                <button class="p-menu--toggle" data-idea-toggle="nav">
-                    Toggle Nav
-                </button>
-    
-<pre><div class="p-code--block">&lt;button class="p-menu--toggle" data-idea-toggle&gt;
-    Dropdown ▾
-    &lt;menu class="p-menu" data-idea-target&gt;
-        &lt;li&gt;Menu Item&lt;/li&gt;
-        &lt;li&gt;Another One&lt;/li&gt;
-        &lt;li&gt;More Items&lt;/li&gt;
-        &lt;li&gt;Last Item&lt;/li&gt;
-    &lt;/menu&gt;
-&lt;/button&gt;
-</div></pre>
-       
-            </div>
-        </div>
-
-    </section>
-
-    <section class="container section" id="colors">
-        
-        <header>
-            <h2>Color System</h2>    
-        </header>
-
-        <p>
-            Generate a starting point for your color system by adding your primary/project/brand color to the <code class="p-code">_colors.scss</code> file as the <code class="p-code">$color-primary</code> variable. <br><br>
-            Using a little Sass magic, your color palette will be generated to fit your shit.  
-        </p>
-
-        <div class="row responsive-sm">
-            <div class="col">
-                <div class="p-box p-color-dark">
-                    <code>$color-dark</code>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-box p-color-primary">
-                    <code>$color-primary</code>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-box p-color-primary-light">
-                    <code>$color-primary-light</code>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-box p-color-primary-lighter">
-                    <code>$color-primary-lighter</code>
-                </div>
-            </div>
-        </div>
-        <div class="row responsive-sm">
-            <div class="col">
-                <div class="p-box p-color-highlight">
-                    <code>$color-highlight</code>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-box p-color-white">
-                    <code>$color-white</code>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-box p-color-black">
-                    <code>$color-black</code>
-                </div>
-            </div>
-        </div>
-        <div class="row responsive-sm">
-            <div class="col">
-                <div class="p-box p-color-gray-dark">
-                    <code>$color-gray-dark</code>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-box p-color-gray">
-                    <code>$color-gray</code>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-box p-color-gray-light">
-                    <code>$color-gray-light</code>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-box p-color-gray-lighter">
-                    <code>$color-gray-lighter</code>
-                </div>
-            </div>
-        </div>
-
-    </section>
 
 </body>
 </html>
