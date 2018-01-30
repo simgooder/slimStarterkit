@@ -1,5 +1,5 @@
 // The $space variable is set to 16px, which is equal to 1em, if the body font-size is set to 100%;
-$space: 1em;
+$space: 1rem;
 
 // For rows with gutters
 $gutter-width: 0.5em;
@@ -9,7 +9,7 @@ $gutter-width: 0.5em;
 $system-font-stack: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Oxygen', 'Ubuntu', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
 
 $font-size-meta: 0.85em;
-$font-stack: 'Open Sans', $system-font-stack;
+$font-stack: 'Work Sans', $system-font-stack;
 
 // Form Elements
 $button-height: 2.5em;

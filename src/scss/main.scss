@@ -4,42 +4,49 @@
 *
 */
 
-//     Utils
-//----------------------
-@import 'utils/colors',
-        'utils/variables',
-        'utils/media-queries',
-        'utils/mixins',
-        'utils/functions'
-;
+@import 'utils/*.scss';
+@import 'base/*.scss';
+@import 'elements/*.scss';
+@import 'components/*.scss';
+@import 'layout/*.scss';
 
-//     Base    
-//----------------------
-@import 'base/normalize',
-        'base/helpers',
-        'base/base'
-;
+// //     Utils
+// //----------------------
+// @import 'utils/colors',
+//         'utils/variables',
+//         'utils/media-queries',
+//         'utils/mixins',
+//         'utils/functions'
+// ;
 
-//     Elements
-//----------------------
-@import 'elements/buttons',
-        'elements/forms',
-        'elements/inputs',
-        'elements/images',
-        'elements/table'
-;
+// //     Base    
+// //----------------------
+// @import 'base/normalize',
+//         'base/helpers',
+//         'base/base'
+// ;
 
-//     Components
-//----------------------
-@import 'components/nav',
-        'components/typography',
-        'components/card'
-;  
+// //     Elements
+// //----------------------
+// @import 'elements/buttons',
+//         'elements/forms',
+//         'elements/inputs',
+//         'elements/images',
+//         'elements/table',
+//         'elements/typography'
+// ;
 
-//     Layout  
-//----------------------
-@import 'layout/grid',
-        'layout/positioning',
-        'layout/spacing',
-        'layout/containers'
-;  
+// //     Components
+// //----------------------
+// @import 'components/nav',
+//         'components/card'
+// ;  
+
+// //     Layout  
+// //----------------------
+// @import 'layout/grid',
+//         'layout/positioning',
+//         'layout/spacing',
+//         'layout/containers',
+//         'layout/sections'
+// ;  

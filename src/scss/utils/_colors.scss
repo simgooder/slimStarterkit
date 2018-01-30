@@ -2,13 +2,13 @@
 //    and through SASS functions, we could create an appropriate palette for the
 //    - http://sass-lang.com/documentation/Sass/Script/Functions.html
 
-$color-primary:     #0962EA;
+$color-primary:     #6473fa; 
 $color-primary-500: darken($color-primary, 25%);
 $color-primary-300: lighten($color-primary, 15%);
 $color-primary-100: lighten($color-primary, 45%);
 
-$color-highlight:   #FAF15D;
-$color-success: mediumspringgreen;
+$color-highlight:   #fa5e80; //#00EDAF;
+$color-success: $color-highlight;
 $color-danger: red;
 
 $color-light:       #fff;
@@ -19,3 +19,5 @@ $color-gray-500: $color-dark;
 $color-gray-400: lighten($color-gray-500, 25%);
 $color-gray-300: lighten($color-gray-400, 25%);
 $color-gray-200: lighten($color-gray-300, 22%);
+
+$color-grad-highlight: linear-gradient(40deg, $color-highlight, lighten($color-highlight, 10%));

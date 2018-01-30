@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1414" height="1023" viewBox="0 0 1414 1023">
+  <defs>
+    <linearGradient id="texture-bg-a" x1="0%" y1="33.185%" y2="56.747%">
+      <stop offset="0%" stop-color="#EAEDF6"/>
+      <stop offset="100%" stop-color="#6473FA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1414" height="1023" fill="url(#texture-bg-a)" fill-rule="evenodd" opacity=".46"/>
+</svg>

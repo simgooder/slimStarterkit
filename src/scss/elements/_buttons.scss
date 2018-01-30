@@ -14,7 +14,7 @@
 
     white-space: nowrap;
     text-decoration: none;
-    line-height: #{$button-height - 0.1};
+    line-height: #{$button-height - 0.25};
     font-weight: 600;
     font-size: $font-size-meta;
     letter-spacing: 0.015em;
@@ -23,9 +23,15 @@
 
     cursor: pointer;
 
+    transition: 0.15s ease;
+
     // For a larger hit-zone on mobile
     @include mq-sm {
         @include hitzone(0.5em);
+    }
+
+    .icon {
+        width: 1.25rem;
     }
 }
 
@@ -38,11 +44,14 @@
 
     background-color: $color-primary;
     border-color: $color-primary;
+    box-shadow: 0 0.15em 0.2em 0 rgba($color-gray-400, 0.5);
 
     &:hover,
     &:focus {
         background-color: rgba($color-primary, 0.9);
         color: #fff;
+
+        box-shadow: 0 0.35em 0.4em 0 rgba($color-gray-400, 0.35);
     }
     &:active {
 
@@ -56,12 +65,14 @@
     color: $color-primary;
 
     border-color: $color-primary;
-
-    transition: color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 0.15em 0.2em 0 rgba($color-gray-400, 0.5);
 
     &:hover,
     &:focus {
-        border-color: $color-primary-300;
+        border-color: $color-primary-500;
+        color: $color-primary-500;
+
+        box-shadow: 0 0.35em 0.4em 0 rgba($color-gray-400, 0.35);
     }
     &:active {
 
@@ -78,7 +89,58 @@
 
     &:hover,
     &:focus {
-        color: $color-primary-300;
+        color: $color-primary-500;
+    }
+    &:active {
+
+    }
+}
+
+// Icon Buttons
+.btn-icon {
+    @include btn-base();
+    width: $button-height;
+
+    padding: 0;
+
+    border-color: $color-primary;
+
+    color: $color-primary;
+
+    span, i {
+        font-size: 1.5rem;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $color-primary-300;
+    }
+    &:active {
+
+    }
+}
+
+.btn-icon-light {
+    @include btn-base();
+    width: $button-height;
+
+    padding: 0;
+
+    border-color: $color-light;
+
+    color: $color-light;
+
+    span, i {
+        font-size: 1.5rem;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $color-gray-200;
+
+        span, i {
+            color: $color-gray-200;
+        }
     }
     &:active {
 
@@ -88,8 +150,8 @@
 // Floating Action Button
 
 @mixin btn-fab-base {
-    width: 3.5rem; 
-    height: 3.5rem;
+    width: 3.65rem; 
+    height: 3.65rem;
 
     display: flex;
     align-items: center;
@@ -98,13 +160,23 @@
     border-radius: 50%; 
     box-shadow: 0 0.25em 1em 0 rgba($color-dark, 0.2);
     background-color: $color-highlight;
+    background: $color-grad-highlight;
+    border: 2px solid $color-light;
 
     text-align: center;
-    color: $color-primary;
+    color: $color-light;
     font-size: $font-size-meta;
     font-weight: 600;
 
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+        border-color: $color-highlight;
+    }
+    &:active {
+
+    }
 }
 
 .btn-fab {
@@ -116,7 +188,9 @@
 
     position: fixed; 
     bottom: 2em; 
-    right: 3em; 
+    right: 2.5em; 
+
+    z-index: z("overlay");
 }
 
 

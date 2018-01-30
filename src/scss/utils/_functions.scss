@@ -2,7 +2,7 @@
 //  to use: check-text-color($bg-color)
 
 @function check-text-color($color) {
-  @if (lightness($color) > 65) {
+  @if (lightness($color) > 70) {
     @return $color-gray-500; // Lighter backgorund, return dark color
   } @else {
     @return $color-light; // Darker background, return light color

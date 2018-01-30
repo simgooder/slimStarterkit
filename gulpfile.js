@@ -45,7 +45,8 @@ if (options.production) production = true;
 
 gulp.task('sass', function() {
 
-    return gulp.src('src/scss/main.scss')
+    return gulp
+        .src('src/scss/main.scss')
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(dist + 'css'))
@@ -94,8 +95,10 @@ gulp.task('js', function() {
 // ============= */
 
 gulp.task('move-templates', function() {
-    return gulp.src('src/**/*.html')
-        .pipe(gulp.dest(dist))
+    return gulp.src([
+        'src/**/*.html'
+    ])
+    .pipe(gulp.dest(dist))
 })
 
 
@@ -105,11 +108,15 @@ gulp.task('move-templates', function() {
 
 gulp.task('images', function() {
 
-    return gulp.src('src/img/**/*')
-        .pipe(changed(dist + 'images'))
-        .pipe(imagemin())
-        .pipe(gulp.dest(dist + 'images'))
-        .pipe(browserSync.stream());
+    try {
+        return gulp.src('src/img/**/*')
+            .pipe(changed(dist + 'img'))
+            .pipe(imagemin())
+            .pipe(gulp.dest(dist + 'img'))
+            .pipe(browserSync.stream());
+    } catch (e) {
+        console.error("Image minification failed. Error: ", e)
+    }
 
 });
 
@@ -125,7 +132,7 @@ gulp.task('sprite', function() {
         mode: {
             inline: true,
             symbol: {
-            dest: dist
+                dest: dist
             }
         },
         svg: {
@@ -134,6 +141,7 @@ gulp.task('sprite', function() {
             dimensionAttributes: false
         }
     }))
+
     .pipe(gulp.dest('.'))
     .pipe(browserSync.stream());
 
