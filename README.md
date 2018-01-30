@@ -1,4 +1,4 @@
-# Slim Starter Kit v0.1.7
+# Slim Starter Kit v0.2.0
 
 
 ## Directions  
