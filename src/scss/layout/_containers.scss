@@ -24,22 +24,26 @@
     width: 100%;
     max-width: $bp-md;
 
-    padding-left: 1em;
-    padding-right: 1em;
-
     margin-left: auto;
     margin-right: auto;
+
+    @include mq($bp-md) {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
 
 .container-sm {
     width: 100%;
     max-width: $bp-sm;
 
-    padding-left: 1em;
-    padding-right: 1em;
-
     margin-left: auto;
     margin-right: auto;
+
+    @include mq($bp-sm) {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
 
 .container-xs {
