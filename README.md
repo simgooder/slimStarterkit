@@ -1,6 +1,5 @@
 # Slim Starter Kit v0.2.0
 
-
 ## Directions  
 
 1. Open Terminal  

@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function(){ 
 
-    function getToggles(){
+    getToggles = function(){
         // Find all the toggles
         var toggle = document.querySelectorAll('[data-idea-toggle]');
 
