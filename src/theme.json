@@ -1,0 +1,28 @@
+{
+	"name": "My Pagesimple Website",
+
+	"description": "Some unique insight about this Pagesimple theme.",
+
+	"tags": [
+        "Website", "Landing Page"
+    ],
+   
+    "templates": {
+        "page": {
+            "Home": "index.html", 
+            "Lander": "templates/template.html"
+        },
+
+        "default_page": "Home"
+    },
+
+    "poster": "poster.png",
+
+    "config": {
+	    "editor": {
+            "editable": [ "[role=main]" ],
+            "blocks": [ ".row", ".section", ".container", ".container-*" ],
+            "inline_blocks": [ ".col-*" ]
+        }
+    }
+}

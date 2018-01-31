@@ -46,7 +46,7 @@ if (options.production) production = true;
 gulp.task('sass', function() {
 
     return gulp
-        .src('src/scss/main.scss')
+        .src('scss/main.scss')
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(dist + 'css'))
@@ -61,7 +61,6 @@ gulp.task('sass', function() {
             })
         ])))
         .pipe(gulpif(production, cssnano()))
-        //.pipe(gulpif(production, extReplace('.min.css')))
         .pipe(gulpif(production, gulp.dest(dist + 'css')))
         .pipe(gulpif(production, browserSync.stream()));
 
@@ -96,7 +95,8 @@ gulp.task('js', function() {
 
 gulp.task('move-templates', function() {
     return gulp.src([
-        'src/**/*.html'
+        'src/**/*.html',
+        'src/**/*.json'
     ])
     .pipe(gulp.dest(dist))
 })
@@ -202,11 +202,8 @@ gulp.task('reset', function() {
 gulp.task('clean', function() {
 
     del([
-        '*.html',
         'dist/**',
-        '!dist',
-        '!dist/svg',
-        '!dist/svg/**'
+        '!dist'
     ]);
 
 });
@@ -219,11 +216,11 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
 
     gulp.watch(['package.json'], ['reset', 'build']);
-    gulp.watch('src/scss/**/*.scss', ['sass']);
+    gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/img/**/*', ['images']);
-    gulp.watch('src/svg/*', ['sprite']);
-    gulp.watch('src/**/*.html', ['move-templates', 'reload']);
+    // gulp.watch('src/svg/*', ['sprite']);
+    gulp.watch(['src/**/*.html', 'src/**/*.json'], ['move-templates', 'reload']);
 
 });
 
@@ -234,8 +231,8 @@ gulp.task('watch', function() {
 
 gulp.task('build', [
     'images',
-    'sprite',
     'sass',
+    'move-templates',
     'js'
 ]);
 
