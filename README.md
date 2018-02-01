@@ -13,6 +13,11 @@
 
 ----
 
+## ToDo
+- [] Implement UNCSS in Gulp process
+- [] Refactor button system to include `secondary` and `outline`
+- [] Implement easily overrideable project defaults for `border-radius`
+- [] Implement a typographic scale
 
 ## Changelog
 
