@@ -1,12 +1,13 @@
-.card {
+@mixin card-base {
     position: relative;
     background-color: $color-light;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 1.5em;
-    padding-left: 1.5em;
 
     border-radius: $radius-sm;
+    border: 1px solid $color-gray-100;
 
-    box-shadow: $box-shadow-sm;
+    box-shadow: $shadow-sm;
+}
+
+.card {
+    @include card-base();
 }

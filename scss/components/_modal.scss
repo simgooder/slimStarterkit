@@ -1,0 +1,78 @@
+// <dialog class="modal-card" open>
+//     <div class="modal-close">
+//         &times;
+//     </div>
+//     <div class="modal-content">
+//         <h3 class="modal-heading">Modal Heading</h3>
+//         <p>
+//             Do you confirm?
+//         </p>
+//     </div>
+//     <menu class="modal-menu">
+//         <button class="btn-tertiary">
+//             Cancel
+//         </button>
+//         <button class="btn-primary">
+//             Confirm
+//         </button>
+//     </menu>
+// </dialog>
+
+.modal-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    padding: 1.5em 2em;
+
+    border: 1px solid $color-gray-100;
+    box-shadow: $shadow-lg;
+    border-radius: $radius;
+}
+    // The X
+    .modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+
+        font-size: 2.1em;
+        line-height: 1;
+        font-weight: $font-medium;
+        color: $color-gray-300;
+
+        cursor: pointer;
+
+        &:hover {
+            color: $color-gray-400;
+        }
+    }
+
+    // The content box
+    .modal-content {
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+
+        // The heading
+        .modal-heading {
+            margin-top: 0;
+
+            font-size: 1.25em;
+            font-weight: $font-bold;
+        }
+
+    // Contains the buttons
+    .modal-menu {
+
+        text-align: right;
+        
+        button:last-of-type {
+            margin-left: 1em;
+        }
+
+    }

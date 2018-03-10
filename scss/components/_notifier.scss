@@ -1,0 +1,48 @@
+// <div class="notifier-neutral">
+//     I am a notifier!
+// </div>
+
+
+@mixin notifier-base {
+    @include card-base;
+
+    width: auto;
+    max-width: 15em;
+
+    @include mq-sm {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    padding-bottom: 1.25em;
+    padding-top: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+
+    color: $color-dark;
+    font-weight: $font-medium;
+    text-align: left;
+
+    border: 1px solid $color-gray-100;
+    box-shadow: $shadow-lg;
+    border-top-width: 5px;
+    border-top-style: solid;
+}
+
+.notifier-neutral {
+    @include notifier-base();
+
+    border-top-color: $color-primary;
+}
+
+.notifier-success {
+    @include notifier-base();
+
+    border-top-color: $color-success;
+}
+
+.notifier-danger {
+    @include notifier-base();
+
+    border-top-color: $color-danger;
+}

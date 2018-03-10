@@ -1,0 +1,89 @@
+// <div class="dropdown-menu-wrapper">
+//     <button class="btn-icon" data-toggle="menu1">
+//         <i class="material-icons">more_vert</i>
+//     </button>
+
+//     <menu class="dropdown-menu -menu-left" data-target="menu1">
+//         <menuitem class="dropdown-menu-item"> Lentil Burger
+//         </menuitem>
+//         <menuitem class="dropdown-menu-item"> Cheese Burger
+//         </menuitem>
+//         <menuitem class="dropdown-menu-item"> Sasquatch Burger
+//         </menuitem>
+//         <menuitem class="dropdown-menu-item"> Whistle Dog
+//         </menuitem>
+//     </menu>
+// </div>
+
+// This just sets a relative position to the container
+.dropdown-menu-wrapper {
+    position: relative;
+}   
+
+.dropdown-menu {
+    @include card-base;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: $z-interactive;
+
+    padding-left: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    text-align: left;
+
+    box-shadow: $shadow-md;
+
+    // Hidden State
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6%);
+    transform-origin: bottom right;
+
+    transition: 0.2s ease;
+}
+
+    // Active State
+    .dropdown-menu.-is-active,
+    .dropdown-menu.-menu-left.-is-active,
+    .dropdown-menu.-menu-top.-is-active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    
+    // Dropdown modifiers ----
+    .dropdown-menu.-menu-left {
+        left: auto;
+        right: 0;
+    }
+    .dropdown-menu.-menu-top {
+        transform: translateY(6%);
+        top: auto;
+        bottom: 100%;
+    }
+
+
+    .dropdown-menu-item {
+        display: block;
+    
+        margin-left: 0;
+
+        padding: 1em 1.5em;
+
+        font-size: $font-size-meta;
+        font-weight: $font-bold;
+        white-space: nowrap;
+
+        cursor: pointer;
+
+        &:hover {
+            background: $color-primary-grad;
+            color: $color-light;
+        }
+    }

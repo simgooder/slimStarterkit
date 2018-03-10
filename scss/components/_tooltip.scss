@@ -1,0 +1,51 @@
+// <button class="btn-secondary tooltip-trigger">
+//     <i class="material-icons">
+//         info
+//     </i>
+//     <div class="tooltip-content">Tooltip content</div>
+//     Hover me
+// </button>
+
+.tooltip-trigger {
+    position: relative;
+}
+
+.tooltip-content {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding-top: 0.75em;
+    padding-bottom: 0.85em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    background-color: $color-gray-500;
+    border-radius: $radius;
+
+    line-height: 1;
+    color: $color-light;
+    font-size: 0.75rem;
+    font-family: $font-stack;
+
+    // Hidden state
+    opacity: 0;
+    visibility: hidden;
+    margin-bottom: 0.25em;
+    transition: opacity 0.2s ease, visibility 0.2s ease, margin-bottom 0.2s ease;
+
+    &::after {
+        @include arrow-down(0.5em, $color-gray-500);
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+    }
+}
+
+.tooltip-trigger:hover .tooltip-content,
+.tooltip-trigger:hover ~ .tooltip-content {
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 0.45em;
+}

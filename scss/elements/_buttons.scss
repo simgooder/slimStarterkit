@@ -15,7 +15,7 @@
     white-space: nowrap;
     text-decoration: none;
     line-height: #{$button-height - 0.25};
-    font-weight: 600;
+    font-weight: $font-medium;
     font-size: $font-size-meta;
     letter-spacing: 0.015em;
 
@@ -166,7 +166,7 @@
     text-align: center;
     color: $color-light;
     font-size: $font-size-meta;
-    font-weight: 600;
+    font-weight: $font-medium;
 
     cursor: pointer;
 

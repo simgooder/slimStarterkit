@@ -5,19 +5,26 @@
 1. Open Terminal  
 2. Navigate to the project folder  
 3. `npm install` installs the dependencies (You only need to do this once)  
-4. `grunt server` starts the server  
-5. In a new tab, `grunt dev` starts the dev build process  
-6. This process will automatically open the site in your default browser  
-7. Write code. Enjoy browser refreshing and live CSS injection.   
-8. Use `grunt build` for production build.
+4. `gulp` starts the server  
+5. This process will automatically open the site in your default browser  
+6. Write code. Enjoy browser refreshing and live CSS injection.   
+7. Use `gulp build` for production build.
 
 ----
 
 ## ToDo
+- [] Implement Prettify.js for code snippets in the demo
+- [] Style tooltip!
+- [] Style modal!
+- [] Style notifier!
+- [] Style tabset!
+- [] Style dropdown!
+- [] Style toggle!
+- [] Add `danger` button
+- [] Implement `$font-heading` + `$font-copy`
 - [] Implement UNCSS in Gulp process
-- [] Refactor button system to include `secondary` and `outline`
-- [] Implement easily overrideable project defaults for `border-radius`
 - [] Implement a typographic scale
+
 
 ## Changelog
 

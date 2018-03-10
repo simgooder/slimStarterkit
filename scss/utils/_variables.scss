@@ -8,16 +8,31 @@ $gutter-width: 0.5em;
 // This is a font stack to use the OS' default font
 $system-font-stack: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Oxygen', 'Ubuntu', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
 
-$font-size-meta: 0.85em;
 $font-stack: 'Work Sans', $system-font-stack;
+
+
+// Font Sizes
+$font-size-meta: 0.85em;
+
+// Font Weights
+$font-bold: 700;
+$font-medium: 600;
+$font-normal: 400;
 
 // Form Elements
 $button-height: 2.5em;
-
+ 
 // Box Shadow
-$box-shadow-sm: 0em 0.1em 0.25em 0em rgba($color-gray-500, 0.5);
+$shadow-sm: 1px 2px 4px 0 rgba($color-primary-500, 0.2);
+$shadow-md: 1px 3px 12px 0 rgba($color-primary-500, 0.2);
+$shadow-lg: 0px 4px 24px 0 rgba($color-primary-500, 0.15);
 
 // Border-radius
-$radius: $space/4;
-$radius-sm: $space/6;
+$radius: $space/3;
+$radius-sm: $space/4;
+
+// Z-Index
+$z-layout: 2;
+$z-interactive: 3;
+$z-notifier: 4;
 

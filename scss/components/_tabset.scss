@@ -1,0 +1,30 @@
+.tabset {
+    padding-top: 1em;
+    padding-bottom: 0.25em;
+    margin-bottom: 1em;
+
+    border-bottom: 1px solid $color-gray-100;
+}
+
+    .tab {
+        margin-left: 0.8em;
+        margin-right: 0.8em;
+        
+        padding-bottom: 0.25em;
+
+        font-weight: $font-bold;
+        color: $color-gray-300;
+
+        border-bottom: 3px solid transparent;
+
+        cursor: pointer;
+
+        &:hover {
+            color: $color-gray-400;
+        }
+    }
+
+    .tab.-is-active {
+        color: $color-dark;
+        border-bottom-color: $color-primary;
+    }
