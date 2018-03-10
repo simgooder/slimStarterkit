@@ -1,0 +1,64 @@
+// <label class="switch-wrapper">
+//     <input type="checkbox" />
+//     <div class="switch-interface"></div>
+//     <span class="label-input">Switch Label</span>
+// </label>
+
+.switch-wrapper {
+    position: relative;
+}
+
+    .switch-wrapper span {
+        display: inline-block;
+
+        margin-left: 0.5em;
+
+        vertical-align: text-top;
+    }
+
+    .switch-wrapper input[type="checkbox"] {
+        @include visually-hidden;
+    }
+
+    // The switch UI
+    .switch-interface {
+        position: relative;
+        display: inline-block;
+        width: #{$button-height};
+        height: #{$button-height / 1.7};
+
+        border-radius: #{$button-height / 1.7};
+        background-color: $color-gray-300;
+
+        cursor: pointer;
+
+        transition: background-color 0.2s ease;
+    }
+
+    // Unchecked state
+    .switch-interface::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 0;
+
+        width: #{$button-height / 1.7};
+        height: #{$button-height / 1.7};
+
+        border: 4px solid $color-gray-300;
+        background-color: $color-light;
+        border-radius: 50%;
+
+        transition: left 0.15s ease-in-out;
+    }
+
+    // Checked state
+    .switch-wrapper input[type="checkbox"]:checked + .switch-interface {
+        background-color: $color-primary;
+
+        &::before {
+            left: calc(100% - #{$button-height / 1.7});
+
+            border-color: $color-primary;
+        }
+    }
