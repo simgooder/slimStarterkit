@@ -1,0 +1,32 @@
+{
+    "docNav": [
+        {
+            "label": "Layout",
+            "subNav": [
+                {
+                    "label": "Grid"
+                },
+                {
+                    "label": "Positioning"
+                },
+                {
+                    "label": "Containers"
+                }
+            ]
+        },
+        {
+            "label": "Elements",
+            "subNav": [
+                {
+                    "label": "Buttons"
+                },
+                {
+                    "label": "Inputs"
+                }
+            ]
+        },
+        {
+            "label": "Colors"
+        }
+    ]
+}

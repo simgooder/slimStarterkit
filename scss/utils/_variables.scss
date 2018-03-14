@@ -10,6 +10,8 @@ $system-font-stack: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Oxygen
 
 $font-stack: 'Work Sans', $system-font-stack;
 
+$font-copy: $font-stack;
+$font-heading: $font-stack;
 
 // Font Sizes
 $font-size-meta: 0.85em;

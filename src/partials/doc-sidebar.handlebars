@@ -1,0 +1,18 @@
+<aside class="sidebar">
+    <nav>
+        {{#each docNav}}
+        <li class="sidebar-item">
+            <a href="#{{url label}}">
+                {{label}}
+            </a>
+                {{#each subNav}}
+                    <li class="sidebar-item-sub">
+                        <a href="#{{url label}}">
+                            {{label}}
+                        </a>
+                    </li>
+                {{/each}}
+        </li>
+        {{/each}}
+    </nav>
+</aside>

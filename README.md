@@ -13,17 +13,19 @@
 ----
 
 ## ToDo
-- [] Implement Prettify.js for code snippets in the demo
-- [] Style tooltip!
-- [] Style modal!
-- [] Style notifier!
-- [] Style tabset!
-- [] Style dropdown!
-- [] Style toggle!
-- [] Add `danger` button
-- [] Implement `$font-heading` + `$font-copy`
-- [] Implement UNCSS in Gulp process
-- [] Implement a typographic scale
+-[] Implement Prettify.js for code snippets in the demo
+-[] Style tooltip!
+-[] Style modal!
+-[] Style notifier!
+-[] Style tabset!
+-[] Style dropdown!
+-[] Style toggle!
+-[] Add `danger` button
+-[] Add `loading` states
+-[] Implement `$font-heading` + `$font-copy`
+-[] Implement a typographic scale
+-[] On initial Gulp build, build `/dist` directory for CSS
+-[x] Implement templating system
 
 
 ## Changelog

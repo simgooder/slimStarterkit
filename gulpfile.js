@@ -20,7 +20,10 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
-    svgSprite = require('gulp-svg-sprite');
+    svgSprite = require('gulp-svg-sprite'),
+    autoprefixer = require('autoprefixer'),
+    handlebars = require('gulp-compile-handlebars'),
+    fs = require("fs");
 
 
 /* ================
@@ -28,6 +31,7 @@ var gulp = require('gulp'),
 // ============= */
 
 var dist = 'dist/',
+    src = 'src/',
     base = './' + dist,
     min = '',
     production = true;
@@ -45,27 +49,22 @@ if (options.production) production = true;
 
 gulp.task('sass', function() {
 
+    var plugins = [
+        autoprefixer({ browsers: ['> 0.5%', 'ie > 10'], cascade: false })
+    ];
+
     return gulp
         .src('scss/main.scss')
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(dist + 'css'))
         .pipe(browserSync.stream())
-        .pipe(gulpif(production, postcss([
-            require('autoprefixer')({
-                browsers: [
-                    '> 0.25%',
-                    'ie > 10'
-                ],
-                cascade: false
-            })
-        ])))
+        .pipe(postcss(plugins))
         .pipe(gulpif(production, cssnano()))
         .pipe(gulpif(production, gulp.dest(dist + 'css')))
         .pipe(gulpif(production, browserSync.stream()));
 
 });
-
 
 /* ================
 // Compile JS
@@ -90,16 +89,39 @@ gulp.task('js', function() {
 
 
 /* ================
-// Compile JS
+// Move files
 // ============= */
 
 gulp.task('move-templates', function() {
     return gulp.src([
         'src/**/*.html',
-        'src/**/*.json'
+        'src/**/*.json',
+        '!src/**/data.json'
     ])
     .pipe(gulp.dest(dist))
 })
+
+
+/* ================
+// Compile Handlebars Templates
+// ============= */
+gulp.task('compile-templates', function () {
+    var templateData = JSON.parse(fs.readFileSync("src/data.json"));
+    options = {
+        //ignorePartials: true, 
+        batch: ['./src/partials'],
+        helpers: {
+            url: function (str) {
+                return str.replace(/\s+/g, '-').toLowerCase();
+            }
+        }
+    }
+
+    return gulp.src('src/*.handlebars')
+        .pipe(handlebars(templateData, options))
+        .pipe(extReplace('.html'))
+        .pipe(gulp.dest(dist));
+});
 
 
 /* ================
@@ -169,7 +191,7 @@ gulp.task('browser-sync', function() {
                 borderBottomLeftRadius: '0'
             }
         }
-  });
+    });
 
 });
 
@@ -203,7 +225,9 @@ gulp.task('clean', function() {
 
     del([
         'dist/**',
-        '!dist'
+        '!dist',
+        'dist/js',
+        'dist/css'
     ]);
 
 });
@@ -215,10 +239,11 @@ gulp.task('clean', function() {
 
 gulp.task('watch', function() {
 
-    gulp.watch(['package.json'], ['reset', 'build']);
+    gulp.watch('package.json', ['reset', 'build']);
     gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/img/**/*', ['images']);
+    gulp.watch(['src/**/*.handlebars', 'src/**/data.json'], ['compile-templates', 'reload']);
     // gulp.watch('src/svg/*', ['sprite']);
     gulp.watch(['src/**/*.html', 'src/**/*.json'], ['move-templates', 'reload']);
 
@@ -230,6 +255,7 @@ gulp.task('watch', function() {
 // ============= */
 
 gulp.task('build', [
+    'clean',
     'images',
     'sass',
     'move-templates',
@@ -238,6 +264,8 @@ gulp.task('build', [
 
 gulp.task('default', [
     'build',
+    'compile-templates',
+    'reload',
     'watch',
     'browser-sync'
 ]);
