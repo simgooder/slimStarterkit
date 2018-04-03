@@ -159,8 +159,8 @@
 
     border-radius: 50%; 
     box-shadow: 0 0.25em 1em 0 rgba($color-dark, 0.2);
-    background-color: $color-highlight;
-    background: $color-grad-highlight;
+    background-color: $color-accent;
+    background: $color-primary-grad;
     border: 2px solid $color-light;
 
     text-align: center;
@@ -172,7 +172,7 @@
 
     &:hover,
     &:focus {
-        border-color: $color-highlight;
+        border-color: $color-accent;
     }
     &:active {
 
