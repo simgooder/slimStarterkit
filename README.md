@@ -14,7 +14,6 @@
 
 ## ToDo
 -[] Implement Prettify.js for code snippets in the demo
--[] Break documentation sections into partials
 -[] Style tooltip!
 -[] Style modal!
 -[] Style notifier!
@@ -25,7 +24,6 @@
 -[] Add `loading` states
 -[] Implement `$font-heading` + `$font-copy`
 -[] Implement a typographic scale
--[] On initial Gulp build, build `/dist` directory for CSS
 
 
 ## Changelog
