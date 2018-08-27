@@ -14,16 +14,11 @@
 
 ## ToDo
 -[] Implement Prettify.js for code snippets in the demo
--[] Style tooltip!
--[] Style modal!
--[] Style notifier!
--[] Style tabset!
--[] Style dropdown!
--[] Style toggle!
 -[] Add `danger` button
 -[] Add `loading` states
--[] Implement `$font-heading` + `$font-copy`
 -[] Implement a typographic scale
+-[] Handle build errors (especially Handlebars compilation and image processing)
+-[] After these are wrapped up, merge `newVersion` as `Master`
 
 
 ## Changelog
