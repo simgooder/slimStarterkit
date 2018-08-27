@@ -13,12 +13,12 @@
 ----
 
 ## ToDo
-- [] Implement Prettify.js for code snippets in the demo
-- [] Add `danger` button
-- [] Add `loading` states
-- [] Implement a typographic scale
-- [] Handle build errors (especially Handlebars compilation and image processing)
-- [] After these are wrapped up, merge `newVersion` as `Master`
+- [ ] Implement Prettify.js for code snippets in the demo
+- [ ] Add `danger` button
+- [ ] Add `loading` states
+- [ ] Implement a typographic scale
+- [ ] Handle build errors (especially Handlebars compilation and image processing)
+- [ ] After these are wrapped up, merge `newVersion` as `Master`
 
 
 ## Changelog
