@@ -1,4 +1,4 @@
-# Slim Starter Kit v0.2.0
+# Slim Starter Kit v0.2.5
 
 ## Directions  
 
@@ -23,7 +23,9 @@
 
 __Updates__ - *v0.2.5* 
 - Add `assets` folder to `src`, move `img` folder into `assets`
-- 
+- Template all meta data for ease of use. Just fill out the `data.json` file to fill data across a whole template
+- Update documentation languge
+- Add navigation sidebar to documentation
 
 __Updates__ - *v0.2.0*
 - Moved to Gulp for faster build process
