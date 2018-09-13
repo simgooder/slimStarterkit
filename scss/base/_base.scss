@@ -43,5 +43,7 @@ input, button {
 }
 
 select {
-    appearance: none;
+    appearance: textfield;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
 }

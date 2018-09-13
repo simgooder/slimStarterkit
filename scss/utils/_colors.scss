@@ -3,23 +3,23 @@
 
 $color-primary:     #6473fa; 
 $color-primary-500: darken($color-primary, 25%);
+$color-primary-400: $color-primary;
 $color-primary-300: lighten($color-primary, 15%);
 $color-primary-100: lighten($color-primary, 30%);
 $color-primary-grad: linear-gradient(-45deg, $color-primary 0%, $color-primary-100 100%);
 
 $color-accent:   #fa5e80; 
 
-$color-success: $color-accent;
-$color-danger: #fa5e80;
+$color-success: #1AD1A8;
+$color-danger:  #f82d59;
 
-$color-light:   #fff;
+$color-white:   #fff;
 $color-black:   #111;
-$color-dark:    mix( desaturate($color-primary, 60%), $color-black, 35% );
 
-$color-gray-500: $color-dark;
+$color-gray-500: mix( desaturate($color-primary, 60%), $color-black, 35% );
 $color-gray-400: lighten($color-gray-500, 25%);
 $color-gray-300: lighten($color-gray-400, 25%);
-$color-gray-200: lighten($color-gray-300, 22%);
+$color-gray-200: $color-primary-100;
 $color-gray-100: lighten($color-gray-200, 25%);
 
 
@@ -36,8 +36,8 @@ $color-gray-100: lighten($color-gray-200, 25%);
 //     $color-accent, 
 //     $color-success,
 //     $color-danger,
-//     $color-light,
-//     $color-dark,
+//     $color-white,
+//     $color-gray-500,
 //     $color-gray-500,
 //     $color-gray-400,
 //     $color-gray-300,

@@ -126,9 +126,9 @@
 
     padding: 0;
 
-    border-color: $color-light;
+    border-color: $color-white;
 
-    color: $color-light;
+    color: $color-white;
 
     span, i {
         font-size: 1.5rem;
@@ -158,13 +158,13 @@
     justify-content: center;
 
     border-radius: 50%; 
-    box-shadow: 0 0.25em 1em 0 rgba($color-dark, 0.2);
+    box-shadow: 0 0.25em 1em 0 rgba($color-gray-500, 0.2);
     background-color: $color-accent;
     background: $color-primary-grad;
-    border: 2px solid $color-light;
+    border: 2px solid $color-white;
 
     text-align: center;
-    color: $color-light;
+    color: $color-white;
     font-size: $font-size-meta;
     font-weight: $font-medium;
 

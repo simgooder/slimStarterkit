@@ -1,4 +1,17 @@
 {
+    "globalMeta" : [
+        {
+            "title": "Slim Starterkit",
+            "description": "A simple, starting point for website projects. Also known as a boilerplate.",
+            "url": "https://simgooder.github.io/slimStarterkit/",
+            "logo": "img/slim-starterkit-logo.svg",
+            "themeColor": "#6473fa",
+            "author": "TheIdea.io",
+            "twitterUser": "theidea_io",
+            "facebookUser": "theidea.io"
+        }
+    ],
+
     "docNav": [
         {
             "label": "Layout",
@@ -7,7 +20,7 @@
                     "label": "Grid"
                 },
                 {
-                    "label": "Positioning"
+                    "label": "Spacing"
                 },
                 {
                     "label": "Containers"

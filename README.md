@@ -13,15 +13,17 @@
 ----
 
 ## ToDo
-- [ ] Implement Prettify.js for code snippets in the demo
-- [ ] Add `danger` button
-- [ ] Add `loading` states
-- [ ] Implement a typographic scale
-- [ ] Handle build errors (especially Handlebars compilation and image processing)
-- [ ] After these are wrapped up, merge `newVersion` as `Master`
+- [ ] Add Pagesimple usage clause to `README.md`
+- [ ] Update `documentation` to provide information about site structure and templating
+- [ ] Merge `newVersion` as `Master` v0.3.0
+- [ ] Create build task to generate `theme.json` file
 
 
 ## Changelog
+
+__Updates__ - *v0.2.5* 
+- Add `assets` folder to `src`, move `img` folder into `assets`
+- 
 
 __Updates__ - *v0.2.0*
 - Moved to Gulp for faster build process

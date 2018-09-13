@@ -199,6 +199,21 @@ AddDefaultCharset utf-8
 
 
 # ----------------------------------------------------------------------
+# | Suppressing / Forcing the `www.` at the beginning of URLs          |
+# ----------------------------------------------------------------------
+
+# Remove `.html` extension from URLs 
+# website.com/index.html → website.com/index
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([^\.]+)$ $1.html [NC,L]
+</IfModule>
+
+
+
+# ----------------------------------------------------------------------
 # | File access                                                        |
 # ----------------------------------------------------------------------
 

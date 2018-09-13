@@ -2,7 +2,19 @@
 
 // Sidebar
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
 
+    height: 100%;
+
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    background-color: #fff;
+    border-right: 1px solid rgba(#6473fa, 0.25);
 }
 
     .sidebar-item {
@@ -14,3 +26,73 @@
             list-style-type: none;
             margin-left: 1.5em;
         }
+
+
+// Make room for sidebar
+.push-left {
+    padding-left: 8rem;
+}
+
+.color-block {
+    position: relative;
+}
+.color-block::after {
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    transform: translateY(-50%);
+
+    content:'';
+    width: 2em;
+    height: 2em;
+
+    border: 1px solid $color-gray-300;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.c-primary::after {
+    background-color: $color-primary;
+}
+.c-primary-500::after {
+    background-color: $color-primary-500;
+}
+.c-primary-300::after {
+    background-color: $color-primary-300;
+}
+.c-primary-100::after {
+    background-color: $color-primary-100;
+}
+.c-primary-grad::after {
+    background: $color-primary-grad;
+}
+.c-accent::after {
+    background-color: $color-accent;
+}
+.c-success::after {
+    background-color: $color-success;
+}
+.c-danger::after {
+    background-color: $color-danger;
+}
+.c-white::after {
+    background-color: $color-white;
+}
+.c-black::after {
+    background-color: $color-black;
+}
+.c-gray-500::after {
+    background-color: $color-gray-500;
+}
+.c-gray-400::after {
+    background-color: $color-gray-400;
+}
+.c-gray-300::after {
+    background-color: $color-gray-300;
+}
+.c-gray-200::after {
+    background-color: $color-gray-200;
+}
+.c-gray-100::after {
+    background-color: $color-gray-100;
+}

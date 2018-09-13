@@ -4,21 +4,23 @@
 
 <head>
 
+    {{#each globalMeta}}
     <title>
-        Slim Starterkit - A simple, starting point for website projects. Also known as a boilerplate.
+        {{title}} - {{description}}
     </title>
 
     <!-- The Meta Fun -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="canonical" href="">
 
     <link rel="shortcut icon" href="img/favicon/favicon.png?v=1" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.ico?v=1" type="image/x-icon">
-    <link rel="mask-icon" href="img/favicon/favicon.svg?v=1" color="#6473fa" type="">
+    <link rel="mask-icon" href="img/favicon/favicon.svg?v=1" color="{{themeColor}}" type="">
 
-    <meta name="theme-color" content="#6473fa">
+    <link rel="canonical" href="{{url url}}{{filename}}">
+
+    <meta name="theme-color" content="{{themeColor}}">
 
     <!-- Scripts -->
     <script src="js/site.min.js"></script>
@@ -27,23 +29,25 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Third Party Assets -->
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
+    {{!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet"> --}}
 
     <!-- Meta Tags -->
-    <meta name="description" content="A simple, starting point for website projects. Also known as a boilerplate.">
+    <meta name="description" content="{{description}}">
 
     <!-- Open Graph Markup for Social Sharing -->
-    <meta property="og:title" content="Slim Starterkit" />
+    <meta property="og:title" content="{{title}}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://simgooder.github.io/slimStarterkit/" />
-    <meta property="og:image" content="img/slim-starterkit-logo.svg" />
-    <meta property="og:site_name" content="SlimStarterkit" />
-    <meta property="og:description" content="A simple, starting point for website projects. Also known as a boilerplate." />
+    <meta property="og:url" content="{{url url}}" />
+    <meta property="og:image" content="{{logo}}" />
+    <meta property="og:site_name" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
 
-    <!-- <meta name="twitter:card" content="">
+    {{!-- <meta name="twitter:card" content="">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="">
-    <meta name="twitter:image" content=""> -->
+    <meta name="twitter:image" content=""> --}}
+
+    {{/each}}
 
 </head>
 

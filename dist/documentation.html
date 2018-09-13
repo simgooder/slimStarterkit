@@ -12,11 +12,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="canonical" href="">
 
     <link rel="shortcut icon" href="img/favicon/favicon.png?v=1" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.ico?v=1" type="image/x-icon">
     <link rel="mask-icon" href="img/favicon/favicon.svg?v=1" color="#6473fa" type="">
+
+    <link rel="canonical" href="https://simgooder.github.io/slimstarterkit/documentation.html">
 
     <meta name="theme-color" content="#6473fa">
 
@@ -27,7 +28,6 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Third Party Assets -->
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
 
     <!-- Meta Tags -->
     <meta name="description" content="A simple, starting point for website projects. Also known as a boilerplate.">
@@ -35,15 +35,12 @@
     <!-- Open Graph Markup for Social Sharing -->
     <meta property="og:title" content="Slim Starterkit" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://simgooder.github.io/slimStarterkit/" />
+    <meta property="og:url" content="https://simgooder.github.io/slimstarterkit/" />
     <meta property="og:image" content="img/slim-starterkit-logo.svg" />
-    <meta property="og:site_name" content="SlimStarterkit" />
+    <meta property="og:site_name" content="Slim Starterkit" />
     <meta property="og:description" content="A simple, starting point for website projects. Also known as a boilerplate." />
 
-    <!-- <meta name="twitter:card" content="">
-    <meta name="twitter:site" content="">
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:image" content=""> -->
+
 
 </head>
 
@@ -90,7 +87,8 @@
         
         
         <main role="main">
-<aside class="sidebar">
+<aside class="sidebar" data-idea-target="toc">
+    <h5>Table of Contents</h5>
     <nav>
         <li class="sidebar-item">
             <a href="#layout">
@@ -102,8 +100,8 @@
                         </a>
                     </li>
                     <li class="sidebar-item-sub">
-                        <a href="#positioning">
-                            Positioning
+                        <a href="#spacing">
+                            Spacing
                         </a>
                     </li>
                     <li class="sidebar-item-sub">
@@ -133,10 +131,14 @@
             </a>
         </li>
     </nav>
+    <button class="sidebar-tab" data-idea-toggle="toc">|||</button>
 </aside>
-<section class="container">
+<section class="container push-left">
     <header>
-        <h1>Documentation</h1>
+        <h1>
+            Documentation <br>
+            &amp; Styleguide
+        </h1>
     </header>
 
     
@@ -170,11 +172,11 @@
     
     <section class="section">
         
-        <h3 id="positioning">
-            Positioning
+        <h3 id="spacing">
+            Spacing
         </h3>
         <p>Based on a simple
-            <code>$space</code> variable, and a set of helper classes, positioning your elements with padding or extra margin is as easy as adding a
+            <code>$space</code> variable, and a set of helper classes, spacing your elements with padding or extra margin is as easy as adding a
             class. In this case,
             <code>$space</code> is equal to
             <code>1em</code>.</p>
@@ -264,6 +266,7 @@
                     <tr>
                         <th class="no-wrap">Container</th>
                         <th class="no-wrap">Max-width</th>
+                        <th class="no-wrap">Var</th>
                         <th class="no-wrap">Class</th>
                     </tr>
                 </thead>
@@ -271,7 +274,10 @@
                     <tr>
                         <td>Extra Large</td>
                         <td class="no-wrap">
-                            <code>1880px ($bp-xl)</code>
+                            <code>1880px</code>
+                        </td>
+                        <td class="no-wrap">
+                            <code>$bp-xl</code>
                         </td>
                         <td class="no-wrap">
                             <code>.container-xl</code>
@@ -280,7 +286,10 @@
                     <tr>
                         <td>Large</td>
                         <td class="no-wrap">
-                            <code>1260px ($bp-lg)</code>
+                            <code>1260px</code>
+                        </td>
+                        <td class="no-wrap">
+                            <code>$bp-lg</code>
                         </td>
                         <td class="no-wrap">
                             <code>.container-lg</code>
@@ -289,7 +298,10 @@
                     <tr>
                         <td>Medium</td>
                         <td class="no-wrap">
-                            <code>1024px ($bp-md)</code>
+                            <code>1024px</code>
+                        </td>
+                        <td class="no-wrap">
+                            <code>$bp-md</code>
                         </td>
                         <td class="no-wrap">
                             <code>.container</code>
@@ -298,7 +310,10 @@
                     <tr>
                         <td>Small</td>
                         <td class="no-wrap">
-                            <code>760px ($bp-sm)</code>
+                            <code>760px</code>
+                        </td>
+                        <td class="no-wrap">
+                            <code>$bp-sm</code>
                         </td>
                         <td class="no-wrap">
                             <code>.container-sm</code>
@@ -307,7 +322,10 @@
                     <tr>
                         <td>Extra Small</td>
                         <td class="no-wrap">
-                            <code>520px ($bp-xs)</code>
+                            <code>520px</code>
+                        </td>
+                        <td class="no-wrap">
+                            <code>$bp-xs</code>
                         </td>
                         <td class="no-wrap">
                             <code>.container-xs</code>
@@ -422,18 +440,6 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="color-block c-primary"></td>
-                        <td class="no-wrap">
-                            Primary
-                        </td>
-                        <td class="no-wrap">
-                            <code>$color-primary</code>
-                        </td>
-                        <td>
-                            Used for actionable items
-                        </td>
-                    </tr>
-                    <tr>
                         <td class="color-block c-primary-500"></td>
                         <td class="no-wrap">
                             Primary 500
@@ -447,6 +453,18 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="color-block c-primary"></td>
+                        <td class="no-wrap">
+                            Primary/400
+                        </td>
+                        <td class="no-wrap">
+                            <code>$color-primary</code>
+                        </td>
+                        <td>
+                            Used for actionable items
+                        </td>
+                    </tr>
+                    <tr>
                         <td class="color-block c-primary-300"></td>
                         <td class="no-wrap">
                             Primary 300
@@ -455,7 +473,7 @@
                             <code>$color-primary-300</code>
                         </td>
                         <td>
-                            Slightly lighter shade of
+                            Lighter shade of
                             <code>primary</code>. Used for alternate states (hover, etc).
                         </td>
                     </tr>
@@ -475,7 +493,7 @@
                     <tr>
                         <td class="color-block c-accent"></td>
                         <td class="no-wrap">
-                            accent
+                            Accent
                         </td>
                         <td class="no-wrap">
                             <code>$color-accent</code>
@@ -485,44 +503,18 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="color-block c-light"></td>
+                        <td class="color-block c-primary-grad"></td>
                         <td class="no-wrap">
-                            Light
+                            Gradient
                         </td>
                         <td class="no-wrap">
-                            <code>$color-light</code>
+                            <code>$color-primary-grad</code>
                         </td>
                         <td>
-                            Your favourite shade of
-                            <code>white</code>.
+                            Gradient based on <code>primary</code>. Who doesn't like gradients?
                         </td>
                     </tr>
-                    <tr>
-                        <td class="color-block c-black"></td>
-                        <td class="no-wrap">
-                            Black
-                        </td>
-                        <td class="no-wrap">
-                            <code>$color-black</code>
-                        </td>
-                        <td>
-                            Your favourite shade of black.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="color-block c-dark"></td>
-                        <td class="no-wrap">
-                            Dark
-                        </td>
-                        <td class="no-wrap">
-                            <code>$color-dark</code>
-                        </td>
-                        <td>
-                            Your favourite shade of
-                            <code>black</code> with a hint of
-                            <code>primary</code>.
-                        </td>
-                    </tr>
+            
                     <tr>
                         <td class="color-block c-success"></td>
                         <td class="no-wrap">
@@ -545,6 +537,19 @@
                         </td>
                         <td>
                             Your favourite shade of error.
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="color-block c-black"></td>
+                        <td class="no-wrap">
+                            Black
+                        </td>
+                        <td class="no-wrap">
+                            <code>$color-black</code>
+                        </td>
+                        <td>
+                            Your favourite shade of black.
                         </td>
                     </tr>
                     <tr>
@@ -612,6 +617,18 @@
                             <code>$color-gray-200</code>.
                         </td>
                     </tr>
+                    <tr>
+                        <td class="color-block c-white"></td>
+                        <td class="no-wrap">
+                            White
+                        </td>
+                        <td class="no-wrap">
+                            <code>$color-white</code>
+                        </td>
+                        <td>
+                            Your favourite shade of white.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
     
@@ -624,7 +641,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="section mar-t_xl bg-primary-grad">
+<footer class="section mar-t_xl bg-primary-grad" role="info">
 
     <div class="container-sm row row-between responsive-sm">
         <p>

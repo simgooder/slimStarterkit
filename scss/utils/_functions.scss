@@ -5,7 +5,7 @@
   @if (lightness($color) > 70) {
     @return $color-gray-500; // Lighter backgorund, return dark color
   } @else {
-    @return $color-light; // Darker background, return light color
+    @return $color-white; // Darker background, return light color
   }
 }
 
