@@ -5,6 +5,11 @@
             "description": "A simple, starting point for website projects. Also known as a boilerplate.",
             "url": "https://simgooder.github.io/slimStarterkit/",
             "logo": "img/slim-starterkit-logo.svg",
+            "siteThumbnail": {
+                "src": "img/slim-starterkit-poster.png",
+                "width": "940",
+                "height": "492"
+            },
             "themeColor": "#6473fa",
             "author": "TheIdea.io",
             "twitterUser": "theidea_io",
