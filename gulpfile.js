@@ -34,7 +34,7 @@ var gulp = require('gulp'),
 var dist = 'dist/',
     src = 'src/',
     assets = 'assets/'
-    production = true;
+production = true;
 
 var options = minimist(process.argv.slice(2));
 
@@ -45,7 +45,7 @@ if (options.production) production = true;
 // Compile Sass
 // ============= */
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
 
     var plugins = [
         autoprefixer({ browsers: ['> 0.5%', 'ie > 10'], cascade: false })
@@ -65,18 +65,18 @@ gulp.task('sass', function() {
 // Compile JS
 // ============= */
 
-gulp.task('js', function() {
+gulp.task('js', function () {
 
     return gulp.src([
         'src/js/**/*.js'
     ])
-    .pipe(concat('site.js'))
-    .pipe(gulpif(production, uglify({
-        mangle: false
-    })))
-    .pipe(gulpif(production, extReplace('.min.js')))
-    .pipe(gulp.dest(dist + 'js'))
-    .pipe(browserSync.stream());
+        .pipe(concat('site.js'))
+        .pipe(gulpif(production, uglify({
+            mangle: false
+        })))
+        .pipe(gulpif(production, extReplace('.min.js')))
+        .pipe(gulp.dest(dist + 'js'))
+        .pipe(browserSync.stream());
 });
 
 
@@ -84,21 +84,22 @@ gulp.task('js', function() {
 // Move files
 // ============= */
 
-gulp.task('move-templates', function() {
+gulp.task('move-templates', function () {
     return gulp.src([
         'src/**/*.html',
         'src/**/*.json',
         '!src/**/data.json'
     ])
-    .pipe(gulp.dest(dist))
+        .pipe(gulp.dest(dist))
 })
 
 gulp.task('move-assets', function () {
     return gulp.src([
         'src/assets/**',
+        '!src/assets/svg',
         '!src/assets/img'
     ])
-    .pipe(gulp.dest(dist + assets))
+        .pipe(gulp.dest(dist + assets))
 })
 
 
@@ -139,7 +140,7 @@ gulp.task('compile-templates', function () {
 // Optimize Images
 // ============= */
 
-gulp.task('images', function() {
+gulp.task('images', function () {
 
     try {
         return gulp.src('src/assets/img/**/*')
@@ -155,28 +156,29 @@ gulp.task('images', function() {
 
 
 /* ================
-// Create Sprite
+// Create SVG Sprite
 // ============= */
 
-gulp.task('sprite', function() {
+gulp.task('sprite', function () {
 
     return gulp.src('src/assets/svg/*.svg')
         .pipe(svgSprite({
-        mode: {
-            inline: true,
-            symbol: {
-                dest: dist
+            mode: {
+                inline: true,
+                symbol: {
+                    dest: "svg",
+                    sprite: "sprite.svg",
+                }
+            },
+            svg: {
+                xmlDeclaration: true,
+                doctypeDeclaration: true,
+                dimensionAttributes: false
             }
-        },
-        svg: {
-            xmlDeclaration: false,
-            doctypeDeclaration: false,
-            dimensionAttributes: false
-        }
-    }))
+        }))
 
-    .pipe(gulp.dest(dist + 'assets/svg'))
-    .pipe(browserSync.stream());
+        .pipe(gulp.dest(dist + 'assets'))
+        .pipe(browserSync.stream());
 
 });
 
@@ -185,7 +187,7 @@ gulp.task('sprite', function() {
 // Sync Changes
 // ============= */
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
 
     browserSync.init({
         logPrefix: packageJSON.name,
@@ -206,9 +208,9 @@ gulp.task('browser-sync', function() {
 
 });
 
-gulp.task('reload', function() {
+gulp.task('reload', function () {
 
-	browserSync.reload();
+    browserSync.reload();
 
 });
 
@@ -217,7 +219,7 @@ gulp.task('reload', function() {
 // Reset Build
 // ============= */
 
-gulp.task('reset', function() {
+gulp.task('reset', function () {
 
     try {
         packageJSON = reload('./package.json');
@@ -232,7 +234,7 @@ gulp.task('reset', function() {
 // Clean Dist
 // ============= */
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
 
     del.sync([
         'dist/**',
@@ -248,16 +250,17 @@ gulp.task('clean', function() {
 // Watch Files
 // ============= */
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 
     gulp.watch('package.json', ['reset', 'build']);
     gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/assets/img/**/*', ['images']);
     gulp.watch(['src/**/*.hbs', 'src/**/data.json'], ['compile-templates', 'reload']);
-    // gulp.watch('src/svg/*', ['sprite']);
+    gulp.watch('src/assets/svg/*', ['sprite']);
     gulp.watch(['src/**/*.html', 'src/**/*.hbs', 'src/**/*.json'], ['move-templates', 'reload']);
-    gulp.watch(['src/assets/**', '!src/assets/img'], ['move-assets', 'reload'])
+    // gulp.watch(['src/assets/**', '!src/assets/img'], ['move-assets', 'reload'])
+    gulp.watch(['src/assets/**', '!src/assets/img'])
 
 });
 
@@ -269,9 +272,10 @@ gulp.task('watch', function() {
 gulp.task('build', [
     'clean',
     'images',
+    'sprite',
     'sass',
     'move-templates',
-    'move-assets',
+    // 'move-assets',
     'js'
 ]);
 
