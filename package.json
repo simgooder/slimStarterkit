@@ -1,7 +1,7 @@
 {
-  "name": "starterkit",
+  "name": "slim-starterkit",
   "version": "0.2.0",
-  "description": "a starterkit for web projects",
+  "description": "a slim starterkit for web projects",
   "repository": {
     "type": "git",
     "url": "https://github.com/simgooder/slimStarterkit"

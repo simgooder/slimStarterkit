@@ -13,15 +13,19 @@
 ----
 
 ## ToDo
-- [ ] Implement Prettify.js for code snippets in the demo
-- [ ] Add `danger` button
 - [ ] Add `loading` states
+- [ ] Optimize usage of "if production" in `gulpfile.js`
+- [ ] Add JS utils file (`inViewport`)
 - [ ] Implement a typographic scale
 - [ ] Handle build errors (especially Handlebars compilation and image processing)
-- [ ] After these are wrapped up, merge `newVersion` as `Master`
+- [ ] Merge `newVersion` as `Master` v0.3.0
 
 
 ## Changelog
+
+__Updates__ - *v0.2.5* 
+- Add `assets` folder to `src`, move `img` folder into `assets`
+- 
 
 __Updates__ - *v0.2.0*
 - Moved to Gulp for faster build process
