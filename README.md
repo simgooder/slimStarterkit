@@ -1,4 +1,4 @@
-# Slim Starter Kit v0.3.0
+# Slim Starter Kit v0.3.1
 
 SlimStarterkit uses a combination of a Sass architecture for quick and unopinionated style starter, handlebars for templating, `.htaccess` and `404` file templates, and an automated server/build process using Gulp. This kit is quick, unopinionated, and provides a simple starting point for website projects. 
 
