@@ -4,9 +4,8 @@
 
 <head>
 
-    {{#each globalMeta}}
     <title>
-        {{title}} - {{description}}
+        {{globalMeta.title}} - {{globalMeta.description}}
     </title>
 
     <!-- The Meta Fun -->
@@ -16,11 +15,11 @@
 
     <link rel="shortcut icon" href="img/favicon/favicon.png?v=1" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.ico?v=1" type="image/x-icon">
-    <link rel="mask-icon" href="img/favicon/favicon.svg?v=1" color="{{themeColor}}" type="">
+    <link rel="mask-icon" href="img/favicon/favicon.svg?v=1" color="{{globalMeta.themeColor}}" type="">
 
-    <link rel="canonical" href="{{url url}}{{filename}}">
+    <link rel="canonical" href="{{globalMeta.baseUrl}}{{filename}}">
 
-    <meta name="theme-color" content="{{themeColor}}">
+    <meta name="theme-color" content="{{globalMeta.themeColor}}">
 
     <!-- Scripts -->
     <script src="js/site.min.js"></script>
@@ -32,24 +31,23 @@
     {{!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet"> --}}
 
     <!-- Meta Tags -->
-    <meta name="description" content="{{description}}">
+    <meta name="description" content="{{globalMeta.description}}">
 
     <!-- Open Graph Markup for Social Sharing -->
-    <meta property="og:title" content="{{title}}" />
+    <meta property="og:title" content="{{globalMeta.title}}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{url url}}" />
-    <meta property="og:site_name" content="{{title}}" />
-    <meta property="og:description" content="{{description}}" />
-    <meta property="og:image" content="{{siteThumbnail.src}}" />
-    <meta property="og:image:width" content="{{siteThumbnail.width}}">
-    <meta property="og:image:height" content="{{siteThumbnail.height}}">
+    <meta property="og:url" content="{{globalMeta.baseUrl}}" />
+    <meta property="og:site_name" content="{{globalMeta.title}}" />
+    <meta property="og:description" content="{{globalMeta.description}}" />
+    <meta property="og:image" content="{{globalMeta.siteThumbnail.src}}" />
+    <meta property="og:image:width" content="{{globalMeta.siteThumbnail.width}}">
+    <meta property="og:image:height" content="{{globalMeta.siteThumbnail.height}}">
 
     {{!-- <meta name="twitter:card" content="">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="">
     <meta name="twitter:image" content=""> --}}
 
-    {{/each}}
 
 </head>
 
@@ -57,4 +55,4 @@
 
     <div class="wrapper">
 
-        {{> nav}}
+        {{> _nav}}

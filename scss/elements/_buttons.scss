@@ -147,52 +147,6 @@
     }
 }
 
-// Floating Action Button
-
-@mixin btn-fab-base {
-    width: 3.65rem; 
-    height: 3.65rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%; 
-    box-shadow: 0 0.25em 1em 0 rgba($color-gray-500, 0.2);
-    background-color: $color-accent;
-    background: $color-primary-grad;
-    border: 2px solid $color-white;
-
-    text-align: center;
-    color: $color-white;
-    font-size: $font-size-meta;
-    font-weight: $font-medium;
-
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        border-color: $color-accent;
-    }
-    &:active {
-
-    }
-}
-
-.btn-fab {
-    @include btn-fab-base();
-}
-
-.btn-fab-fixed {
-    @include btn-fab-base();
-
-    position: fixed; 
-    bottom: 2em; 
-    right: 2.5em; 
-
-    z-index: z("overlay");
-}
-
 
 // Button Utilities
 // -- Add these to any button class for an altered appearance

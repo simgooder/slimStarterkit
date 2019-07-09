@@ -99,7 +99,7 @@ gulp.task('move-assets', function () {
         '!src/assets/svg',
         '!src/assets/img'
     ])
-        .pipe(gulp.dest(dist + assets))
+        .pipe(gulp.dest(dist))
 })
 
 
@@ -144,9 +144,9 @@ gulp.task('images', function () {
 
     try {
         return gulp.src('src/assets/img/**/*')
-            .pipe(changed(dist + 'assets/img'))
+            .pipe(changed(dist + 'img'))
             .pipe(imagemin())
-            .pipe(gulp.dest(dist + 'assets/img'))
+            .pipe(gulp.dest(dist + 'img'))
             .pipe(browserSync.stream());
     } catch (e) {
         console.error("Image minification failed. Error: ", e)
@@ -177,7 +177,7 @@ gulp.task('sprite', function () {
             }
         }))
 
-        .pipe(gulp.dest(dist + 'assets'))
+        .pipe(gulp.dest(dist + 'svg'))
         .pipe(browserSync.stream());
 
 });

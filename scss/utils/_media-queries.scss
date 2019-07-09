@@ -65,6 +65,24 @@ $bp-xl: 1880px;
 }
 
 
+// Show / Hide Helper States ------------
+.-hide-bp-sm {
+
+    @include mq-sm {
+        display: none !important;
+    }
+
+}
+
+.-show-bp-sm {
+
+    @include mq-md {
+        display: none;
+    }
+    
+}
+
+
 // Browser Hacks ----------
 
 // Only supported on IOS devices
