@@ -32,6 +32,6 @@
     "require-reload": "^0.2.2"
   },
   "dependencies": {
-    "npm": "^5.7.1"
+    "npm": "^6.13.4"
   }
 }
