@@ -1,5 +1,5 @@
 {
-  "name": "slim-starterkit",
+  "name": "tripper",
   "version": "0.3.0",
   "description": "A simple starting point for web projects",
   "repository": {
@@ -11,27 +11,27 @@
   "license": "WTFPL",
   "devDependencies": {
     "autoprefixer": "^7.1.6",
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.26.7",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.1",
     "gulp-changed": "^3.1.1",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.2",
+    "gulp-cssnano": "^2.1.3",
     "gulp-ext-replace": "^0.3.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.0.0",
     "gulp-postcss": "^7.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-glob": "^1.0.8",
-    "gulp-svg-sprite": "^1.3.7",
+    "gulp-sass": "^3.2.1",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-tap": "^1.0.1",
-    "gulp-uglify": "^3.0.0",
-    "minimist": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "minimist": "^1.2.5",
     "require-reload": "^0.2.2"
   },
   "dependencies": {
-    "npm": "^5.7.1"
+    "npm": "^6.13.4"
   }
 }
